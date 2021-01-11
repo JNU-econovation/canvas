@@ -16,12 +16,15 @@ function saveLetter() {
 }
 
 function loadLetter() {
-    firebase.database().ref('letters').once('value').then((snapshot) => {
-
-        var username = (snapshot.val() && snapshot.val().content) || 'Anonymous';
-        letter.innerHTML = username;
-        console.log(username);
-        console.log(inputBox.value + " was succesfully loaded");
+    firebase.database().ref().child('letters').once('value').then((snapshot) => {
+        var length = snapshot.numChildren();
+        var randNum = Math.floor( Math.random() * 10 ) % length;
+        var count = 0;
+        snapshot.forEach(function(child) {
+            if (count == randNum) {
+                letter.innerHTML = child.val().content;
+            }
+            count += 1;
+        });
     });
-
 }
