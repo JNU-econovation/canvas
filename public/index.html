@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
+    <link rel="stylesheet" href="../src/Styles/App.css"/>
   </head>
   <body>
     <script type="text/javascript" src="../src/index.js"></script>
@@ -11,7 +12,31 @@
       바다
     </div>
     <div class=sands>
-      모래사장
+    </div>
+    </section>
+    <section class="UpNext">
+      <ul>
+<li><button id="bottle" onclick="letterPopup()"></button></li>
+<li><button id="writeButton" onclick="writePopup()">편지쓰기</button></li>
+</ul>
+    </section>
+    <div id="letterPopup" class="hide">
+    <div class="content">
+      <p>
+        <h1>원빈이 쓴 편지</h1>
+      </p>
+      <button id="closeLetterButton" onclick="closeLetterPopup()">닫기</button>
+    </div>
+    </div>
+    <div id="writePopup" class="hide">
+    <div class="content">
+      <p>
+        <input type="text" style=" background: transparent;">
+      </p>
+      <button id="closeWriteButton" onclick="closeWritePopup()">닫기</button>
+    </div>
+    </div>
+  </body>
     </div>
   </body>
 </html>
