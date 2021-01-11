@@ -3,7 +3,6 @@
   <head>
   </head>
   <body>
-    <script type="text/javascript" src="../src/index.js"></script>
     <div class=sky>
       하늘
     </div>
@@ -12,6 +11,16 @@
     </div>
     <div class=sands>
       모래사장
+      <input type="text" value="입력하시오" size="20" id="inputBox">
+      <button type="button" id="saveButton">편지 저장하기</button>
+      <button type="button" id="loadButton">아무 편지나 불러오기</button>
+      <div id="letter"></div>
+
     </div>
   </body>
+  <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-database.js"></script>
+  <script type="text/javascript" src="../src/Services/FirebaseInitializer.js"></script>
+  <script type="text/javascript" src="../src/index.js"></script>
+  <script type="text/javascript" src="../src/sea.js"></script>
 </html>
