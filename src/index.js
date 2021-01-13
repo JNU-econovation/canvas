@@ -23,7 +23,23 @@ var postData = {
 
 */
 
-출처: https://forest71.tistory.com/165 [SW 개발이 좋은 사람]
+function chooseWhite(){
+	//const writingPad = document.querySelector('#writePopup');
+
+	document.getElementById("writePopup").className="whiteSkin";
+}
+
+function chooseRed(){
+	document.getElementById("writePopup").className="redSkin";
+}
+
+function chooseBlue(){
+	document.getElementById("writePopup").className="blueSkin";
+}
+
+function chooseGreen(){
+	document.getElementById("writePopup").className="greenSkin";
+}
 
 function letterPopup() {
 	const popup1 = document.querySelector('#letterPopup');
