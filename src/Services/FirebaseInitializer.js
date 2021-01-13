@@ -10,9 +10,4 @@ fetch("../key.json")
     appId: data.appId
     };
     firebase.initializeApp(firebaseConfig);
-
-    firebase.database().ref('users/' + "hyunseok").set({
-        username: "HyunSeok Jeong",
-        email: "duoq9901@gmail.com",
-    });
 })
