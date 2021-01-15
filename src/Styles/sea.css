@@ -27,8 +27,7 @@
     }
     50% {
       transform: scaleY( 16 );
-    }
-  
+    } 
     100% {
       transform: scaleY( 1 );
     }

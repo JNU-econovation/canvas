@@ -1,6 +1,7 @@
 var bottleNum = 0;
 var maxBottleNum = 8;
 var spawnInterval = 500;
+
 var field;
 var fieldWidth;
 var fieldHeight;
