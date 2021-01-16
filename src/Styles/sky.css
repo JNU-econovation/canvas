@@ -1,10 +1,63 @@
-    .sky {
+.sky {
         color : white;
         font-family: "휴면편지";
+
     }
 
+    /*뇌우*/
+    .thunder
+    {
+    position: absolute;
+    margin-top: -150px;
+    position:absolute;
+    width:100%;
+    height:150%;
+    background: white;
+    animation: lighting 4s linear infinite;
+    opacity:0;
+
+    }  
+    @keyframes lighting
+    {
+        0%
+    {
+        opacity:0;
+    }
+    10%
+    {
+        opacity:0;
+    }
+    11%
+    {
+        opacity:1;
+    }
+    14%
+    {
+        opacity:0;
+    }
+    20%
+    {
+        opacity:0;
+    }
+    21%
+    {
+        opacity:1;
+    }
+    24%
+    {
+        opacity:0;
+    }
+    104%
+    {
+        opacity:0;
+    }
+    } 
+     
+
+  /*눈*/
 
     .snowflake {
+    position: absolute;
     color: #fff;
     font-size: 1em;
     font-family: Arial;
@@ -60,9 +113,11 @@
     /*Time to finalise the cloud shape*/
 
 
-    /**/
+    /*구름*/
 
     .cloud {
+        position:absolute;
+        margin-top: 0px;
         width: 200px; height: 60px;
         background: #fff;
         
@@ -170,9 +225,10 @@
     }
 
 
-    /**/
+    /*비*/
 
     .drop {
+    position: absolute;
     width: 0;
     height: 0;
     border: 30px solid #0590DD;
@@ -381,7 +437,7 @@
 }
 
 
-/**/
+/*해*/
 
 .sun { 
     position: absolute;
@@ -492,8 +548,8 @@
       100% { -webkit-transform: rotate(360deg); transform: rotate(360deg);}
   }
 
-  /**/
 
+  /*달*/
   .moon { 
   position:absolute;
   top:5%;

@@ -2,29 +2,26 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8">
-    
     <link href="../src/Styles/sky.css" link rel="stylesheet" /> 
     <script src="http://code.jquery.com/jquery-latest.js"></script>
-
   </head>
 
   <body>
     <script type="text/javascript" src="../src/index.js"></script>
 
-
       <div class= "sky">
 
-        <span class= "js-date">
+        <span class= "js-date">        <!--시간에 따른 배경색-->
           <script type="text/javascript" src="../src/sky.js"></script>
          </span>
-    
-    
-         <span class= "js-weather">
+        
+         <span class= "js-weather">    <!--날씨 ID값 별 배경 애니메이션 조절-->
          <script type="text/javascript" src="../src/weather.js"></script>
          </span>
-            
-        
-        <div class="snowflakes">
+   
+        <div class="thunder"></div>   <!--뇌우-->
+         
+        <div class="snowflakes">      <!--눈-->
           <div class="snowflake">❄</div><div class="snowflake">❄</div>
           <div class="snowflake">❄</div><div class="snowflake">❄</div>
           <div class="snowflake">❄</div><div class="snowflake">❄</div>
@@ -41,7 +38,7 @@
         </div>
         
        
-        <div class="clouds">
+        <div class="clouds">        <!--흐림-->
           <div class="cloud x1"></div>
           <div class="cloud x2"></div>
           <div class="cloud x3"></div>
@@ -50,7 +47,7 @@
         </div>
         
         
-        <div class="rain">
+        <div class="rain">          <!--비-->
           <div class="drop rain1"></div><div class="drop rain2"></div>
           <div class="drop rain3"></div><div class="drop rain4"></div>    
           <div class="drop rain5"></div><div class="drop rain6"></div>        
@@ -62,7 +59,7 @@
         </div>
          
        
-        <div class="sun">
+        <div class="sun">           <!--해-->
           <div class="ray_box">
               <div class="ray ray1"></div><div class="ray ray2"></div>
               <div class="ray ray3"></div><div class="ray ray4"></div>
@@ -70,19 +67,14 @@
               <div class="ray ray7"></div><div class="ray ray8"></div>
               <div class="ray ray9"></div><div class="ray ray10"></div>
           </div>
-       
-       
-
-        <div class="moon">
-          달
         </div>
-      </div>
        
-
-       하늘
-
+        <div class="moon">          <!--달-->
+        </div>
+        
       </div>
-
+    
+     
     <div class=sea>
       바다
     </div>
@@ -98,11 +90,9 @@
 
 
 
-
-
-    <span class= "js-weather1">
+    <span class= "js-weather1">   <!--시간에 따른 해와 달-->
         <script type="text/javascript" src="../src/weather1.js"></script>
     </span>
-   
+
   </body>
 </html>
