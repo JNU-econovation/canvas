@@ -152,8 +152,40 @@ else {
     document.getElementsByClassName("moon").style.display= "block";
 */
 
+ /*
+const id = json.weather[0].id;
+
+if(id < 600) {
+    document.querySelector(".snowflakes").style.display="none";
+    document.querySelector(".clouds").style.display="none";
+    document.querySelector(".rain").style.display="none";
+    document.querySelector(".sun").style.display="none";
+    document.querySelector(".moon").style.display="none";
+}
+else if(id < 700) {
+    document.querySelector(".snowflakes").style.display="";
+    document.querySelector(".clouds").style.display="none";
+    document.querySelector(".rain").style.display="none";
+    document.querySelector(".sun").style.display="none";
+    document.querySelector(".moon").style.display="none";
+}
+else if(id < 800) {
+    document.querySelector(".snowflakes").style.display="none";
+    document.querySelector(".clouds").style.display="blcok";
+    document.querySelector(".rain").style.display="none";
+    document.querySelector(".sun").style.display="none";
+    document.querySelector(".moon").style.display="none";
+}
+else {
+    document.querySelector(".snowflakes").style.display="none";
+    document.querySelector(".clouds").style.display="none";
+    document.querySelector(".rain").style.display="none";
+    document.querySelector(".sun").style.display="block";
+    document.querySelector(".moon").style.display="block";
+*/
+
 document.querySelector(".snowflakes").style.display="none";
 document.querySelector(".clouds").style.display="none";
 document.querySelector(".rain").style.display="none";
-document.querySelector(".sun").style.display="none";
+document.querySelector(".sun").style.display="blcok";
 document.querySelector(".moon").style.display="none";
