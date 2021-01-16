@@ -40,7 +40,7 @@ function getWeather(lat, lng){
             else if( id < 600) {  // 300~600 비
                 document.querySelector(".thunder").style.display="none";
                 document.querySelector(".snowflakes").style.display="none";
-                document.querySelector(".clouds").style.display="none";
+                document.querySelector(".clouds").style.display="block";
                 document.querySelector(".rain").style.display="block";
             }
             else if( id < 700) {   // 600~700 눈

@@ -117,7 +117,7 @@
 
     .cloud {
         position:absolute;
-        margin-top: 0px;
+        margin-top: 12px;
         width: 200px; height: 60px;
         background: #fff;
         
@@ -438,7 +438,7 @@
 
 
 /*해*/
-
+/*
 .sun { 
     position: absolute;
     top:5%;
@@ -469,6 +469,7 @@
       border-radius:80% 80% 0 0;
       position:absolute;
       opacity:0.1;
+      
   }
   
   .ray1 {    
@@ -547,6 +548,24 @@
           0% { -webkit-transform: rotate(0deg); transform: rotate(0deg);}    
       100% { -webkit-transform: rotate(360deg); transform: rotate(360deg);}
   }
+    */
+
+    .sun { 
+        position:absolute;
+        top:3%;
+        right:3%;
+        object-fit: cover;
+
+        animation: rotate_image 15s linear infinite;
+        transform-origin: 50% 50%;
+    }
+     
+    @keyframes rotate_image{
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+     
 
 
   /*달*/
@@ -559,5 +578,40 @@
   background-color:transparent ;
   border-radius:50px;
   box-shadow:inset 30px -30px #ffffaa;
-  }
+  animation-name: rotate;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
 
+  @keyframes rotate
+{
+    0%
+    {
+    transform:rotate(-10deg);
+    }
+    50%
+    {
+    transform:rotate(10deg);
+    }
+    100%
+    {
+    transform:rotate(-10deg);
+    }
+}
+
+
+  /*갈매기*/
+.seagull {
+    position:absolute;
+    top:18%;
+    left:10%;
+    object-fit: cover;
+}
+
+  /*기본 구름*/
+.cloudbasic {
+    position:absolute;
+    top:25%;
+    left:-4%;
+    right:-11%;
+}
