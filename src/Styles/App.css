@@ -74,7 +74,7 @@ header {
   padding-bottom: 70px;
   padding-left: 50px;
   padding-right: 50px;
-  background-image: url('../src/assets/image/prototype/bottle.png');
+  background-image: url('../Assets/image/prototype/bottle.png');
   border-color: transparent;
   border: none;
   outline: none;
@@ -124,7 +124,7 @@ header {
   padding-bottom: 200px;
   padding-left: 150px;
   padding-right: 150px;
-  background-image:url('../src/assets/image/prototype/letter.png');
+  background-image:url('../Assets/image/prototype/letter.png');
   border-radius: 5px;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, .3);
 }
