@@ -1,3 +1,6 @@
+
+
+
 /* Initialize Firebase
 var config = {
   apiKey:"ABCDEFG",
@@ -45,6 +48,10 @@ function letterPopup() {
 	const popup1 = document.querySelector('#letterPopup');
 
   popup1.classList.remove('hide');
+
+	var string = document.getElementById("letterContents");
+	loadLetter(document.getElementById("bottle")).then(value => { string.innerText= value.content
+});
 }
 
 function closeLetterPopup() {

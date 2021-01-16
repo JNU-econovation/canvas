@@ -4,11 +4,8 @@
     <link rel="stylesheet" href="../src/Styles/App.css"/>
   </head>
   <body>
-    <!--
-    파이어베이스 웹으로 연결시
-    <script src="https://파이어베이스URL/firebase.js"></script>
 
-  -->
+
     <script type="text/javascript" src="../src/index.js"></script>
     <div class=sky>
       하늘
@@ -28,7 +25,7 @@
     <div id="letterPopup" class="hide">
     <div class="content">
       <p>
-        <h1>원빈이 쓴 편지</h1>
+        <h1 id="letterContents">원빈이 쓴 편지</h1>
       </p>
       <button id="closeLetterButton" onclick="closeLetterPopup()">닫기</button>
     </div>
@@ -46,7 +43,12 @@
     <button id="blueWP" onclick="chooseBlue()">파랑</button>
     <button id="greenWP" onclick="chooseGreen()">초록</button>
     </div>
-  </body>
+
     </div>
-  </body>
+    </body>
+    <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-database.js"></script>
+  <script type="text/javascript" src="../src/Services/FirebaseInitializer.js"></script>
+    <script type="text/javascript" src="../src/Services/FirebaseService.js"></script>
+
 </html>
