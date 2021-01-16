@@ -1,7 +1,8 @@
     .sky {
         color : white;
-        font-family: "휴면편지"
+        font-family: "휴면편지";
     }
+
 
     .snowflake {
     color: #fff;
@@ -493,8 +494,7 @@
 
   /**/
 
-  .moon
-  { 
+  .moon { 
   position:absolute;
   top:5%;
   right:5%;
@@ -504,11 +504,4 @@
   border-radius:50px;
   box-shadow:inset 30px -30px #ffffaa;
   }
-  p
-  {  
-  position:absolute;
-  top:50%;
-  left:30%;
-  color:white;
-  font-size:20px;
-  }
+
