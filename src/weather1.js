@@ -151,3 +151,9 @@ else {
     document.getElementsByClassName("sun").style.display= "block";
     document.getElementsByClassName("moon").style.display= "block";
 */
+
+document.querySelector(".snowflakes").style.display="none";
+document.querySelector(".clouds").style.display="none";
+document.querySelector(".rain").style.display="none";
+document.querySelector(".sun").style.display="none";
+document.querySelector(".moon").style.display="none";
