@@ -56,8 +56,16 @@ function letterPopup() {
 }
 
 function saveLetter(){
-	const writeContentxText=document.getAnimations("writeContents").value;
-	writeLetter(document.getElementById("saveLetterButton"), writeContentxText, skinIndex).then();
+	const writeContentxText=document.getElementById("writeContents").value;
+	console.log(writeContentxText);
+	writeLetter(document.getElementById("saveLetterButton"), writeContentxText, skinIndex).then(function(isDone){
+		if(isDone==true){
+			console.log("와!잘됐다!");
+		}
+		else{
+			console.log("와!안됐다!");
+		}
+	});
 	const popup4 = document.querySelector('#writePopup');
 	popup4.classList.add('hide');
 }
