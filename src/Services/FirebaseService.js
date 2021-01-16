@@ -24,6 +24,7 @@ function writeLetter(button, content, skinIndex) {
 
 }
 
+<<<<<<< HEAD
 function loadLetter(button, out) {
     var ret;
 
@@ -47,4 +48,30 @@ function loadLetter(button, out) {
         });
     })
     
+=======
+function loadLetter(button) {
+    var ret;
+
+    button.disabled = true;
+
+    return new Promise((resolve, reject) => {
+        firebase.database().ref().child('letters').once('value').then((snapshot) => {
+            var length = snapshot.numChildren();
+            var randNum = Math.floor( Math.random() * 10 ) % length;
+            var count = 0;
+
+            snapshot.forEach(function(child) {
+                if (count == randNum) {
+                    ret = child.val();
+                    
+                }
+                count += 1;
+            });
+
+            button.disabled = false;
+            resolve(ret);
+        });
+    })
+
+>>>>>>> a847d422c9d75a5c5a55caecf34edfcf6f1c4f12
 }
