@@ -2,12 +2,14 @@
 <html lang="ko">
   <head>
     <link rel="stylesheet" href="../src/Styles/App.css"/>
+    <link rel="stylesheet" href="../src/Styles/sea.css"/>
     <link href="../src/Styles/sky.css" link rel="stylesheet" /> 
     <script src="http://code.jquery.com/jquery-latest.js"></script>
   </head>
   <body>
 
     <script type="text/javascript" src="../src/index.js"></script>
+    
     <div class=sky>
       <span class= "js-date">
         <script type="text/javascript" src="../src/sky.js"></script>
@@ -72,18 +74,24 @@
 
     
     </div>
-    <div class=sea>
+    <div class="sea">
+      <div class="wave"></div>
+    </div>
       바다
     </div>
-    <div class=sands>
-    </div>
+    <div class="sands">
+      <div class="bottleField">
+        
+      </div>
+    
     </section>
-    <!--<section class="UpNext">-->
+    <section class="UpNext">
       <ul>
 <li><button id="bottle" onclick="letterPopup()"></button></li>
 <li><button id="writeButton" onclick="writePopup()">편지쓰기</button></li>
+<li><button id="initializeBottle">편지새로고침</button></li>
 </ul>
-    <!--</section>-->
+    </section>
     <div id="letterPopup" class="hide">
     <div class="content">
       <p>
@@ -108,6 +116,7 @@
 
     </div>
     </body>
+    
     <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-database.js"></script>
   <script type="text/javascript" src="../src/Services/FirebaseInitializer.js"></script>
@@ -115,6 +124,8 @@
 
     <span class= "js-weather1">
       <script type="text/javascript" src="../src/weather1.js"></script>
+
+      <script type="text/javascript" src="../src/sea.js"></script>
   </span>
 
 </html>

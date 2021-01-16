@@ -10,11 +10,17 @@ var wave;
 initialize();
 
 function initialize() {
-    field = document.getElementById('beach');
+
+    var initBottle=document.querySelector('#initializeBottle');
+    console.log(initBottle);
+    initBottle.onclick=function(){cleanField()};
+
+    field = document.querySelector('.bottleField');
+    console.log(field);
     fieldWidth = field.offsetWidth;
     fieldHeight = field.offsetHeight;
 
-    wave = document.getElementById('wave');
+    wave = document.querySelector('.wave');
     wave.addEventListener('animationend', () => {
         wave.classList.remove('wave');
         void wave.offsetWidth;
@@ -30,7 +36,6 @@ function initialize() {
         target.classList.add('wave');
         target.style.animationPlayState = "paused";
     });
-
     spawnBottles();
 }
 
@@ -42,16 +47,18 @@ function cleanField() {
 }
 
 function spawnBottle() {
+
+
     if (bottleNum >= maxBottleNum)
         return;
 
     var bottle = document.createElement('button')
     
-    bottle.className = "bottle";
+    bottle.className = "bottleLetter";
     bottle.style.position = 'absolute';
     bottle.style.left = String((Math.random()*100)%100) + '%';
     bottle.style.top = String((Math.random()*100)%100) + '%';
-    bottle.style.zIndex = String(count);
+    bottle.style.zIndex = String(bottleNum);
 
     var image = document.createElement('img');
     image.className = "bottleImage";
@@ -59,12 +66,15 @@ function spawnBottle() {
     bottle.appendChild(image);
     field.appendChild(bottle);
 
+    bottle.onclick=function(){letterPopup()};
+
     bottleNum += 1;
 }
 
 function spawnBottles() {
-    for (var i = bottle; i < maxBottleNum; i++) {
+    for (var i = bottleNum; i < maxBottleNum; i++) {
         spawnBottle();
+        console.log("현석 선생님?");
     }
 }
 
