@@ -1,0 +1,158 @@
+:root {
+  /* Color */
+  --white-color: #fff;
+  --black-color: #140a00;
+  --blue-color: #045fd4;
+  --red-color: #ff0000;
+  --grey-dark-color: #909090;
+  --grey-light-color: #e0e0e0;
+
+  /* Size */
+  --padding: 82px;
+  --avatar-size: 36px;
+  --upNext-size: 300px;
+
+  /* font size */
+
+  --font-large: 18px;
+  --font-medium: 14px;
+  --font-small: 12px;
+  --font-micro: 10px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body {
+  font-family: Roboto;
+}
+
+ul {
+  list-style: none;
+}
+
+.whiteSkin{
+  background-color: white
+}
+
+.redSkin{
+  background-color: red
+}
+
+.blueSkin{
+  background-color: blue
+}
+
+.greenSkin{
+  background-color: green
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--padding);
+  background-color: skyblue;
+  color: var(--white-color);
+}
+
+#writeButton{
+  padding: 25px;
+  margin-left: 40%;
+}
+#closeButton{
+  border: none;
+  outline: none;
+  padding: 15px;
+}
+#bottle {
+  background-color: transparent !important;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  padding-left: 50px;
+  padding-right: 50px;
+  background-image: url('../Assets/image/prototype/bottle.png');
+  border-color: transparent;
+  border: none;
+  outline: none;
+}
+
+
+#letterPopup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .7);
+  z-index: 1;
+
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+#writePopup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /*background: rgba(0, 0, 0, .7);*/
+  z-index: 1;
+
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+#letterPopup.hide {
+  display: none;
+}
+#writePopup.hide {
+  display: none;
+}
+
+#letterPopup .content {
+  padding-top: 200px;
+  padding-bottom: 200px;
+  padding-left: 150px;
+  padding-right: 150px;
+  background-image:url('../Assets/image/prototype/letter.png');
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, .3);
+}
+#writePopup .content {
+  padding-top: 200px;
+  padding-bottom: 200px;
+  padding-left: 170px;
+  padding-right: 170px;
+  /*background-image:url('../src/assets/image/prototype/letter.png');*/
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, .3);
+}
+#closeLetterButton{
+  padding: 5px;
+  border: none;
+  outline: none;
+}
+#closeWriteButton{
+  padding: 5px;
+  border: none;
+  outline: none;
+}
+
+body > .info {
+    background-color: #c3bebc;
+}
+
+.UpNext {
+  padding: 90px;
+  background-color: #c3bebc;
+}
