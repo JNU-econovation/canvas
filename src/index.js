@@ -26,22 +26,23 @@ var postData = {
 
 */
 
+var skinIndex=0;
+
 function chooseWhite(){
 	//const writingPad = document.querySelector('#writePopup');
 
 	document.getElementById("writePopup").className="whiteSkin";
+	skinIndex=0;
 }
 
 function chooseRed(){
 	document.getElementById("writePopup").className="redSkin";
+	skinIndex=1;
 }
 
 function chooseBlue(){
 	document.getElementById("writePopup").className="blueSkin";
-}
-
-function chooseGreen(){
-	document.getElementById("writePopup").className="greenSkin";
+	skinIndex=2;
 }
 
 function letterPopup() {
@@ -52,6 +53,13 @@ function letterPopup() {
 	var string = document.getElementById("letterContents");
 	loadLetter(document.getElementById("bottle")).then(value => { string.innerText= value.content
 });
+}
+
+function saveLetter(){
+	const writeContentxText=document.getAnimations("writeContents").value;
+	writeLetter(document.getElementById("saveLetterButton"), writeContentxText, skinIndex).then();
+	const popup4 = document.querySelector('#writePopup');
+	popup4.classList.add('hide');
 }
 
 function closeLetterPopup() {
