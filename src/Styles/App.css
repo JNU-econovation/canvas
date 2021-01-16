@@ -35,20 +35,20 @@ ul {
   list-style: none;
 }
 
-.whiteSkin{
-  background-color: white
+.whiteSkin {
+  background-color: white;
 }
 
-.redSkin{
-  background-color: red
+.redSkin {
+  background-color: red;
 }
 
-.blueSkin{
-  background-color: blue
+.blueSkin {
+  background-color: blue;
 }
 
-.greenSkin{
-  background-color: green
+.greenSkin {
+  background-color: green;
 }
 
 header {
@@ -59,11 +59,11 @@ header {
   color: var(--white-color);
 }
 
-#writeButton{
+#writeButton {
   padding: 25px;
   margin-left: 40%;
 }
-#closeButton{
+#closeButton {
   border: none;
   outline: none;
   padding: 15px;
@@ -74,12 +74,11 @@ header {
   padding-bottom: 70px;
   padding-left: 50px;
   padding-right: 50px;
-  background-image: url('../Assets/image/prototype/bottle.png');
+  background-image: url("../Assets/image/prototype/bottle.png");
   border-color: transparent;
   border: none;
   outline: none;
 }
-
 
 #letterPopup {
   display: flex;
@@ -90,11 +89,11 @@ header {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, .7);
+  background: rgba(0, 0, 0, 0.7);
   z-index: 1;
 
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 }
 #writePopup {
   display: flex;
@@ -108,8 +107,8 @@ header {
   /*background: rgba(0, 0, 0, .7);*/
   z-index: 1;
 
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 }
 
 #letterPopup.hide {
@@ -124,9 +123,9 @@ header {
   padding-bottom: 200px;
   padding-left: 150px;
   padding-right: 150px;
-  background-image:url('../Assets/image/prototype/letter.png');
+  background-image: url("../Assets/image/prototype/letter.png");
   border-radius: 5px;
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, .3);
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 #writePopup .content {
   padding-top: 200px;
@@ -135,21 +134,21 @@ header {
   padding-right: 170px;
   /*background-image:url('../src/assets/image/prototype/letter.png');*/
   border-radius: 5px;
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, .3);
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
-#closeLetterButton{
+#closeLetterButton {
   padding: 5px;
   border: none;
   outline: none;
 }
-#closeWriteButton{
+#closeWriteButton {
   padding: 5px;
   border: none;
   outline: none;
 }
 
 body > .info {
-    background-color: #c3bebc;
+  background-color: #c3bebc;
 }
 
 .UpNext {

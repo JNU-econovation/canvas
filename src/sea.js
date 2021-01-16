@@ -1,5 +1,5 @@
 var bottleNum = 0;
-var maxBottleNum = 8;
+var maxBottleNum = 3;
 var spawnInterval = 500;
 
 var field;
@@ -58,11 +58,19 @@ function spawnBottle() {
     bottle.style.position = 'absolute';
     bottle.style.left = String((Math.random()*100)%100) + '%';
     bottle.style.top = String((Math.random()*100)%100) + '%';
+    bottle.style.height='150px';
+    bottle.style.width='100px';
     bottle.style.zIndex = String(bottleNum);
+    bottle.style.backgroundColor='transparent';
+    bottle.style.borderColor= 'transparent';
+    bottle.style.border= 'none';
+    bottle.style.outline= 'none';
+    bottle.style.backgroundImage='url("../src/Assets/image/prototype/bottle.png")';
+    
 
     var image = document.createElement('img');
     image.className = "bottleImage";
-    // image.src = './image/letter.svg';
+    //image.src = url("../Assets/image/prototype/bottle.png");
     bottle.appendChild(image);
     field.appendChild(bottle);
 
