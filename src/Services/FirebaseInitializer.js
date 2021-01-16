@@ -1,4 +1,4 @@
-fetch("../key.json")
+fetch("blahblah")
 .then(response => response.json())
 .then (data => {
   var firebaseConfig = {
