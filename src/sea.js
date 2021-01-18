@@ -11,9 +11,8 @@ initialize();
 
 function initialize() {
 
-    var initBottle=document.querySelector('#initializeBottle');
-    console.log(initBottle);
-    initBottle.onclick=function(){cleanField()};
+    //var initBottle=document.querySelector('#initializeBottle');
+    //initBottle.onclick=function(){cleanField()};
 
     field = document.querySelector('.bottleField');
     console.log(field);
