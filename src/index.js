@@ -46,8 +46,11 @@ function chooseBlue(){
 }
 
 function letterPopup(button) {
+timeObject=false;
+
 	const popupBackground=document.getElementById("letterPopup");
 popupBackground.classList.remove('hide');
+
 
 	var string = document.getElementById("letterContents");
 	loadLetter(button).then(value => { 
@@ -71,7 +74,7 @@ popupBackground.classList.remove('hide');
 		popup1.classList.remove('hide');
 
 		string.innerText= value.content;
-		
+		deleteBottle(button);
 });
 
 
@@ -95,6 +98,8 @@ function saveLetter(){
 }
 
 function closeLetterPopup() {
+
+	timeObject=true;
 	const popup1 = document.querySelector('#letterPopup');
   popup1.classList.add('hide');
   const popup2 = document.querySelector('#letterPopupContents');
@@ -102,6 +107,10 @@ function closeLetterPopup() {
 
 
   popup2.classList.add("content");
+
+  if(bottleNum==0){
+	cleanField();
+  }
 }
 function writePopup() {
 	const popup3 = document.querySelector('#writePopup');

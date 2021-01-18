@@ -1,13 +1,17 @@
 var bottleNum = 0;
 var maxBottleNum = 3;
-var spawnInterval = 500;
+var waveTimer=5000;
 
 var field;
 var fieldWidth;
 var fieldHeight;
 var wave;
 
+var timeObject=true;
+
 initialize();
+
+setTimeout(cleanField, waveTimer);
 
 function initialize() {
 
@@ -39,10 +43,15 @@ function initialize() {
 }
 
 function cleanField() {
+
+    if(timeObject==true){
     var style = wave.style;
     style.animationPlayState = "running";
+    setTimeout(cleanField, waveTimer);
     setTimeout(cleanBottle, 500);
     setTimeout(spawnBottles, 500);
+    }
+
 }
 
 function spawnBottle() {
@@ -87,6 +96,7 @@ function spawnBottles() {
 
 function deleteBottle(bottle) {
     bottle.parentNode.removeChild(bottle);
+    bottleNum-=1;
 }
 
 function cleanBottle() {
@@ -95,6 +105,5 @@ function cleanBottle() {
             deleteBottle(child);
             // beach.removeChild(child); 
             child = field.lastElementChild; 
-            bottleNum -= 1;
         } 
 }
