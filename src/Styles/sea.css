@@ -5,10 +5,16 @@
   background: #4888ff;
 }
 
+.bottleField {
+  position: relative;
+  height: 80%;
+  width: 80%;
+}
+
 .sands {
   height: 40vw;
   width: 100%;
-  background: grey;
+  background: #e7ce94;
 }
 
 .wave {
@@ -16,7 +22,7 @@
 
   width: 100%;
   height: 100%;
-  z-index: 99;
+  z-index: 1;
   background: #4888ff;
   transition: all ease 0s;
   transform-origin: top center;

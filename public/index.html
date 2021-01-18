@@ -94,20 +94,24 @@
     </section>
     <div id="letterPopup" class="hide">
     <div class="content">
+      <div id="letterPopupContents">
       <p>
         <h1 id="letterContents">원빈이 쓴 편지</h1>
       </p>
-      <button id="closeLetterButton" onclick="closeLetterPopup()">닫기</button>
+      <button id="closeLetterButton" onclick="closeLetterPopup()">다시 띄워보내기</button>
+      </div>
     </div>
     </div>
     <div id="writePopup" class="hide">
     <div class="content">
+      <div id="writePopupContents">
       <p>
         <h2 id="letterDate">date</h2>
         <input type="text" id="writeContents" autocomplete="off" style="background: transparent;">
       </p>
       <button id="closeWriteButton" onclick="closeWritePopup()">닫기</button>
       <button id="saveLetterButton" onclick="saveLetter()">띄워보내기</button>
+      </div>
     </div>
     <button id="whiteWP" onclick="chooseWhite()">하양</button>
     <button id="redWP" onclick="chooseRed()">빨강</button>

@@ -30,7 +30,7 @@ function initialize() {
 
     const animated = document.querySelector('.wave');
     animated.addEventListener('animationend', () => {
-        var target = wave[0];
+        var target = wave;
         target.classList.remove('wave');
         void target.offsetWidth;
         target.classList.add('wave');
@@ -57,24 +57,24 @@ function spawnBottle() {
     bottle.className = "bottleLetter";
     bottle.style.position = 'absolute';
     bottle.style.left = String((Math.random()*100)%100) + '%';
-    bottle.style.top = String((Math.random()*100)%100) + '%';
-    bottle.style.height='150px';
-    bottle.style.width='100px';
-    bottle.style.zIndex = String(bottleNum);
+    bottle.style.top = String((Math.random()*70)%100+30) + '%';
+    bottle.style.height='100px';
+    bottle.style.width='233px';
+    bottle.style.zIndex = '0';
     bottle.style.backgroundColor='transparent';
     bottle.style.borderColor= 'transparent';
     bottle.style.border= 'none';
     bottle.style.outline= 'none';
-    bottle.style.backgroundImage='url("../src/Assets/image/prototype/bottle.png")';
+    bottle.style.backgroundImage='url("../src/Assets/Images/bottle_lie_small.png")';
     
 
     var image = document.createElement('img');
     image.className = "bottleImage";
-    //image.src = url("../Assets/image/prototype/bottle.png");
+    //image.src = url("./Assets/Images/bottle_lie.png");
     bottle.appendChild(image);
     field.appendChild(bottle);
 
-    bottle.onclick=function(){letterPopup()};
+    bottle.onclick=function(){letterPopup(bottle)};
 
     bottleNum += 1;
 }

@@ -31,28 +31,40 @@ var skinIndex=0;
 function chooseWhite(){
 	//const writingPad = document.querySelector('#writePopup');
 
-	document.getElementById("writePopup").className="whiteSkin";
+	document.getElementById("writePopupContents").className="whiteSkin";
 	skinIndex=0;
 }
 
 function chooseRed(){
-	document.getElementById("writePopup").className="redSkin";
+	document.getElementById("writePopupContents").className="redSkin";
 	skinIndex=1;
 }
 
 function chooseBlue(){
-	document.getElementById("writePopup").className="blueSkin";
+	document.getElementById("writePopupContents").className="blueSkin";
 	skinIndex=2;
 }
 
-function letterPopup() {
-	const popup1 = document.querySelector('#letterPopup');
+function letterPopup(button) {
+	const popup1 = document.getElementById("letterPopup");
 
   popup1.classList.remove('hide');
+  console.log(popup1.classList);
 
 	var string = document.getElementById("letterContents");
-	loadLetter(document.getElementById("bottle")).then(value => { string.innerText= value.content
+	loadLetter(button).then(value => { 
+		string.innerText= value.content;
+		if(value.skinIndex==0){
+			document.getElementById("letterPopupContents").className="whiteSkin";
+		}
+		else if(value.skinIndex==1){
+			document.getElementById("letterPopupContents").className="redSkin";
+		}
+		else if(value.skinIndex==1){
+			document.getElementById("letterPopupContents").className="blueSkin";
+		}
 });
+
 }
 
 function saveLetter(){
