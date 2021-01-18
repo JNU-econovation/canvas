@@ -100,6 +100,7 @@ function saveLetter(){
 function closeLetterPopup() {
 
 	timeObject=true;
+	setTimeout(cleanField, waveTimer);
 	const popup1 = document.querySelector('#letterPopup');
   popup1.classList.add('hide');
   const popup2 = document.querySelector('#letterPopupContents');
