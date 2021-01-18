@@ -46,24 +46,36 @@ function chooseBlue(){
 }
 
 function letterPopup(button) {
-	const popup1 = document.getElementById("letterPopup");
-
-  popup1.classList.remove('hide');
-  console.log(popup1.classList);
+	const popupBackground=document.getElementById("letterPopup");
+popupBackground.classList.remove('hide');
 
 	var string = document.getElementById("letterContents");
 	loadLetter(button).then(value => { 
-		string.innerText= value.content;
+	
+
+		
 		if(value.skinIndex==0){
 			document.getElementById("letterPopupContents").className="whiteSkin";
 		}
 		else if(value.skinIndex==1){
 			document.getElementById("letterPopupContents").className="redSkin";
 		}
-		else if(value.skinIndex==1){
+		else if(value.skinIndex==2){
 			document.getElementById("letterPopupContents").className="blueSkin";
+
+			
 		}
+
+		const popup1 = document.getElementById("letterPopupContents");
+
+		popup1.classList.remove('hide');
+
+		string.innerText= value.content;
+		
 });
+
+
+	
 
 }
 
@@ -83,8 +95,13 @@ function saveLetter(){
 }
 
 function closeLetterPopup() {
-	const popup2 = document.querySelector('#letterPopup');
+	const popup1 = document.querySelector('#letterPopup');
+  popup1.classList.add('hide');
+  const popup2 = document.querySelector('#letterPopupContents');
   popup2.classList.add('hide');
+
+
+  popup2.classList.add("content");
 }
 function writePopup() {
 	const popup3 = document.querySelector('#writePopup');

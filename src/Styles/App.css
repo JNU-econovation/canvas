@@ -107,7 +107,28 @@ header {
   -webkit-backdrop-filter: blur(4px);
 }
 
+#letterPopupContents {
+  width: 500px;
+  height: 647px;
+}
+
+#letterContents {
+  margin: auto;
+  align-items: center;
+  /*margin-right: 10%;
+  margin-top: 20%;
+  margin-bottom: 20%;*/
+}
+
+#closeLetterButton {
+  margin-left: 40%;
+}
+
 #letterPopup.hide {
+  display: none;
+}
+
+#letterPopupContents.hide {
   display: none;
 }
 
