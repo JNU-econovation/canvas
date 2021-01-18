@@ -26,37 +26,82 @@ var postData = {
 
 */
 
+var skinIndex=0;
+
 function chooseWhite(){
 	//const writingPad = document.querySelector('#writePopup');
 
-	document.getElementById("writePopup").className="whiteSkin";
+	document.getElementById("writePopupContents").className="whiteSkin";
+	skinIndex=0;
 }
 
 function chooseRed(){
-	document.getElementById("writePopup").className="redSkin";
+	document.getElementById("writePopupContents").className="redSkin";
+	skinIndex=1;
 }
 
 function chooseBlue(){
-	document.getElementById("writePopup").className="blueSkin";
+	document.getElementById("writePopupContents").className="blueSkin";
+	skinIndex=2;
 }
 
-function chooseGreen(){
-	document.getElementById("writePopup").className="greenSkin";
-}
-
-function letterPopup() {
-	const popup1 = document.querySelector('#letterPopup');
-
-  popup1.classList.remove('hide');
+function letterPopup(button) {
+	const popupBackground=document.getElementById("letterPopup");
+popupBackground.classList.remove('hide');
 
 	var string = document.getElementById("letterContents");
-	loadLetter(document.getElementById("bottle")).then(value => { string.innerText= value.content
+	loadLetter(button).then(value => { 
+	
+
+		
+		if(value.skinIndex==0){
+			document.getElementById("letterPopupContents").className="whiteSkin";
+		}
+		else if(value.skinIndex==1){
+			document.getElementById("letterPopupContents").className="redSkin";
+		}
+		else if(value.skinIndex==2){
+			document.getElementById("letterPopupContents").className="blueSkin";
+
+			
+		}
+
+		const popup1 = document.getElementById("letterPopupContents");
+
+		popup1.classList.remove('hide');
+
+		string.innerText= value.content;
+		
 });
+
+
+	
+
+}
+
+function saveLetter(){
+	const writeContentxText=document.getElementById("writeContents").value;
+	console.log(writeContentxText);
+	writeLetter(document.getElementById("saveLetterButton"), writeContentxText, skinIndex).then(function(isDone){
+		if(isDone==true){
+			console.log("와!잘됐다!");
+		}
+		else{
+			console.log("와!안됐다!");
+		}
+	});
+	const popup4 = document.querySelector('#writePopup');
+	popup4.classList.add('hide');
 }
 
 function closeLetterPopup() {
-	const popup2 = document.querySelector('#letterPopup');
+	const popup1 = document.querySelector('#letterPopup');
+  popup1.classList.add('hide');
+  const popup2 = document.querySelector('#letterPopupContents');
   popup2.classList.add('hide');
+
+
+  popup2.classList.add("content");
 }
 function writePopup() {
 	const popup3 = document.querySelector('#writePopup');
