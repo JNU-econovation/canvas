@@ -34,7 +34,7 @@ function getWeather(lat, lng){
             else if( id < 300) {  // 200~300 뇌우
                 document.querySelector(".thunder").style.display="block";
                 document.querySelector(".snowflakes").style.display="none";
-                document.querySelector(".clouds").style.display="none";
+                document.querySelector(".clouds").style.display="block";
                 document.querySelector(".rain").style.display="block";
             }
             else if( id < 600) {  // 300~600 비
@@ -42,12 +42,14 @@ function getWeather(lat, lng){
                 document.querySelector(".snowflakes").style.display="none";
                 document.querySelector(".clouds").style.display="block";
                 document.querySelector(".rain").style.display="block";
+                document.body.style.backgroundColor = "#CFCFCF"; //배경색 회색
             }
             else if( id < 700) {   // 600~700 눈
                 document.querySelector(".thunder").style.display="none";
                 document.querySelector(".snowflakes").style.display="blcok";
                 document.querySelector(".clouds").style.display="none";
                 document.querySelector(".rain").style.display="none";
+
             }
             else if( id == 800) {  // 800 : 맑음
                 document.querySelector(".thunder").style.display="none";
