@@ -1,3 +1,5 @@
+//openweathermap API
+
 const weather = document.querySelector (".js-weather");
 
 const API_KEY = "2d66b82c6a59a789528d85ebc336ae5d";
@@ -20,8 +22,54 @@ function getWeather(lat, lng){
             const icon = json.weather[0].icon;
 
             weather.innerText= 
-            `현재 위치 : ${place} \n 현재 기온 : ${temperature} \n id값 : ${id} \n icon값 : ${icon}`;
+            `현재 위치 : ${place} \n 현재 기온 : ${temperature} \n 날씨id : ${id}`;
            
+            //날씨 id값 별 배경 애니메이션 조절
+            if( id < 200) {  // 애니메이션 X
+                document.querySelector(".thunder").style.display="block";
+                document.querySelector(".snowflakes").style.display="none";
+                document.querySelector(".clouds").style.display="none";
+                document.querySelector(".rain").style.display="block";
+            }
+            else if( id < 300) {  // 200~300 뇌우
+                document.querySelector(".thunder").style.display="block";
+                document.querySelector(".snowflakes").style.display="none";
+                document.querySelector(".clouds").style.display="block";
+                document.querySelector(".rain").style.display="block";
+            }
+            else if( id < 600) {  // 300~600 비
+                document.querySelector(".thunder").style.display="none";
+                document.querySelector(".snowflakes").style.display="none";
+                document.querySelector(".clouds").style.display="block";
+                document.querySelector(".rain").style.display="block";
+                document.body.style.backgroundColor = "#CFCFCF"; //배경색 회색
+            }
+            else if( id < 700) {   // 600~700 눈
+                document.querySelector(".thunder").style.display="none";
+                document.querySelector(".snowflakes").style.display="blcok";
+                document.querySelector(".clouds").style.display="none";
+                document.querySelector(".rain").style.display="none";
+
+            }
+            else if( id == 800) {  // 800 : 맑음
+                document.querySelector(".thunder").style.display="none";
+                document.querySelector(".snowflakes").style.display="none";
+                document.querySelector(".clouds").style.display="none";
+                document.querySelector(".rain").style.display="none";
+            }
+            else if( id < 900) {   // 700~900 : 흐림
+                document.querySelector(".thunder").style.display="none";
+                document.querySelector(".snowflakes").style.display="none";
+                document.querySelector(".clouds").style.display="blcok";
+                document.querySelector(".rain").style.display="none";
+            }
+            else { // 애니메이션 X
+                document.querySelector(".thunder").style.display="none";
+                document.querySelector(".snowflakes").style.display="none";
+                document.querySelector(".clouds").style.display="none";
+                document.querySelector(".rain").style.display="none";
+            }
+
         });
     }
 
