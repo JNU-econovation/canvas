@@ -2,12 +2,14 @@
 <html lang="ko">
   <head>
     <link rel="stylesheet" href="../src/Styles/App.css"/>
+    <link rel="stylesheet" href="../src/Styles/sea.css"/>
     <link href="../src/Styles/sky.css" link rel="stylesheet" /> 
     <script src="http://code.jquery.com/jquery-latest.js"></script>
   </head>
   <body>
 
     <script type="text/javascript" src="../src/index.js"></script>
+    
     <div class=sky>
       <span class= "js-date">
         <script type="text/javascript" src="../src/sky.js"></script>
@@ -72,42 +74,51 @@
 
     
     </div>
-    <div class=sea>
+    <div class="sea">
+      <div class="wave"></div>
+    </div>
       바다
     </div>
-    <div class=sands>
-    </div>
+    <div class="sands">
+      <div class="bottleField">
+        
+      </div>
+    
     </section>
     <section class="UpNext">
       <ul>
-<li><button id="bottle" onclick="letterPopup()"></button></li>
+<!--<li><button id="bottle" onclick="letterPopup()"></button></li>-->
 <li><button id="writeButton" onclick="writePopup()">편지쓰기</button></li>
+<li><button id="initializeBottle">편지새로고침</button></li>
 </ul>
     </section>
     <div id="letterPopup" class="hide">
-    <div class="content">
+    <div id="letterPopupContents" class="content, hide">
       <p>
         <h1 id="letterContents">원빈이 쓴 편지</h1>
       </p>
-      <button id="closeLetterButton" onclick="closeLetterPopup()">닫기</button>
+      <button id="closeLetterButton" onclick="closeLetterPopup()">다시 띄워보내기</button>
     </div>
     </div>
     <div id="writePopup" class="hide">
     <div class="content">
+      <div id="writePopupContents">
       <p>
         <h2 id="letterDate">date</h2>
-        <input type="text" style="background: transparent;">
+        <input type="text" id="writeContents" autocomplete="off" style="background: transparent;">
       </p>
       <button id="closeWriteButton" onclick="closeWritePopup()">닫기</button>
+      <button id="saveLetterButton" onclick="saveLetter()">띄워보내기</button>
+      </div>
     </div>
     <button id="whiteWP" onclick="chooseWhite()">하양</button>
     <button id="redWP" onclick="chooseRed()">빨강</button>
     <button id="blueWP" onclick="chooseBlue()">파랑</button>
-    <button id="greenWP" onclick="chooseGreen()">초록</button>
     </div>
 
     </div>
     </body>
+    
     <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-database.js"></script>
   <script type="text/javascript" src="../src/Services/FirebaseInitializer.js"></script>
@@ -115,6 +126,8 @@
 
     <span class= "js-weather1">
       <script type="text/javascript" src="../src/weather1.js"></script>
+
+      <script type="text/javascript" src="../src/sea.js"></script>
   </span>
 
 </html>

@@ -1,5 +1,5 @@
 var bottleNum = 0;
-var maxBottleNum = 8;
+var maxBottleNum = 3;
 var spawnInterval = 500;
 
 var field;
@@ -10,11 +10,17 @@ var wave;
 initialize();
 
 function initialize() {
-    field = document.getElementById('beach');
+
+    var initBottle=document.querySelector('#initializeBottle');
+    console.log(initBottle);
+    initBottle.onclick=function(){cleanField()};
+
+    field = document.querySelector('.bottleField');
+    console.log(field);
     fieldWidth = field.offsetWidth;
     fieldHeight = field.offsetHeight;
 
-    wave = document.getElementById('wave');
+    wave = document.querySelector('.wave');
     wave.addEventListener('animationend', () => {
         wave.classList.remove('wave');
         void wave.offsetWidth;
@@ -24,13 +30,12 @@ function initialize() {
 
     const animated = document.querySelector('.wave');
     animated.addEventListener('animationend', () => {
-        var target = wave[0];
+        var target = wave;
         target.classList.remove('wave');
         void target.offsetWidth;
         target.classList.add('wave');
         target.style.animationPlayState = "paused";
     });
-
     spawnBottles();
 }
 
@@ -42,29 +47,42 @@ function cleanField() {
 }
 
 function spawnBottle() {
+
+
     if (bottleNum >= maxBottleNum)
         return;
 
     var bottle = document.createElement('button')
     
-    bottle.className = "bottle";
+    bottle.className = "bottleLetter";
     bottle.style.position = 'absolute';
     bottle.style.left = String((Math.random()*100)%100) + '%';
-    bottle.style.top = String((Math.random()*100)%100) + '%';
-    bottle.style.zIndex = String(count);
+    bottle.style.top = String((Math.random()*70)%100+30) + '%';
+    bottle.style.height='100px';
+    bottle.style.width='233px';
+    bottle.style.zIndex = '0';
+    bottle.style.backgroundColor='transparent';
+    bottle.style.borderColor= 'transparent';
+    bottle.style.border= 'none';
+    bottle.style.outline= 'none';
+    bottle.style.backgroundImage='url("../src/Assets/Images/bottle_lie_small.png")';
+    
 
     var image = document.createElement('img');
     image.className = "bottleImage";
-    // image.src = './image/letter.svg';
+    //image.src = url("./Assets/Images/bottle_lie.png");
     bottle.appendChild(image);
     field.appendChild(bottle);
+
+    bottle.onclick=function(){letterPopup(bottle)};
 
     bottleNum += 1;
 }
 
 function spawnBottles() {
-    for (var i = bottle; i < maxBottleNum; i++) {
+    for (var i = bottleNum; i < maxBottleNum; i++) {
         spawnBottle();
+        console.log("현석 선생님?");
     }
 }
 
