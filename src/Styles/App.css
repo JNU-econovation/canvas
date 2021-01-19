@@ -35,16 +35,58 @@ ul {
   list-style: none;
 }
 
-.whiteSkin {
+.originalSkin {
+  background-image: url("../Assets/Images/letter_original_small.png");
+}
+
+.oldSkin {
   background-image: url("../Assets/Images/letter_old_small.png");
 }
 
-.redSkin {
-  background-image: url("../Assets/Images/letter-original.png");
+.seafoodSkin {
+  background-image: url("../Assets/Images/letter_seafood_small.png");
 }
 
-.blueSkin {
-  background-image: url("../Assets/Images/letter_seafood.png");
+#originalWP {
+  float: left;
+  background-color: transparent !important;
+  border-color: transparent;
+  border: none;
+  outline: none;
+  background-image: url("../Assets/Images/lettericon_original_small.png");
+  width: 50px;
+  height: 53px;
+  z-index: 4;
+  padding: 25px;
+  margin-left: 5%;
+}
+
+#oldWP {
+  float: left;
+  background-color: transparent !important;
+  border-color: transparent;
+  border: none;
+  outline: none;
+  background-image: url("../Assets/Images/lettericon_old_small.png");
+  width: 50px;
+  height: 53px;
+  z-index: 4;
+  padding: 25px;
+  margin-left: 5%;
+}
+
+#seafoodWP {
+  float: left;
+  background-color: transparent !important;
+  border-color: transparent;
+  border: none;
+  outline: none;
+  background-image: url("../Assets/Images/lettericon_seafood_small.png");
+  width: 50px;
+  height: 53px;
+  z-index: 4;
+  padding: 25px;
+  margin-left: 5%;
 }
 
 header {
@@ -55,10 +97,23 @@ header {
   color: var(--white-color);
 }
 
+#writeContents {
+  background: transparent;
+  border-color: #eeeeee;
+  font-size: 30px;
+}
+
 #writeButton {
+  background-color: transparent !important;
+  border-color: transparent;
+  border: none;
+  outline: none;
+  background-image: url("../Assets/Images/write_button_small.png");
   position: fixed;
   right: 2%;
   bottom: 2%;
+  width: 120px;
+  height: 120px;
   z-index: 4;
   padding: 25px;
   margin-left: 40%;
@@ -112,6 +167,11 @@ header {
 }
 
 #letterPopupContents {
+  width: 500px;
+  height: 647px;
+}
+
+#writePopupContents {
   width: 500px;
   height: 647px;
 }

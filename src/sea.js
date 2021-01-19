@@ -54,6 +54,15 @@ function cleanField() {
 
 }
 
+function sometimesCleanField(){
+    if(timeObject==true){
+        var style = wave.style;
+        style.animationPlayState = "running";
+        setTimeout(cleanBottle, 500);
+        setTimeout(spawnBottles, 500);
+        }
+}
+
 function spawnBottle() {
 
 
@@ -65,7 +74,7 @@ function spawnBottle() {
     bottle.className = "bottleLetter";
     bottle.style.position = 'absolute';
     bottle.style.left = String((Math.random()*100)%100) + '%';
-    bottle.style.top = String((Math.random()*70)%100+30) + '%';
+    bottle.style.top = String((Math.random()*60)%100+40) + '%';
     bottle.style.height='100px';
     bottle.style.width='233px';
     bottle.style.zIndex = '0';

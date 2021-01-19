@@ -28,20 +28,20 @@ var postData = {
 
 var skinIndex=0;
 
-function chooseWhite(){
+function chooseOriginal(){
 	//const writingPad = document.querySelector('#writePopup');
 
-	document.getElementById("writePopupContents").className="whiteSkin";
+	document.getElementById("writePopupContents").className="originalSkin";
 	skinIndex=0;
 }
 
-function chooseRed(){
-	document.getElementById("writePopupContents").className="redSkin";
+function chooseOld(){
+	document.getElementById("writePopupContents").className="oldSkin";
 	skinIndex=1;
 }
 
-function chooseBlue(){
-	document.getElementById("writePopupContents").className="blueSkin";
+function chooseSeafood(){
+	document.getElementById("writePopupContents").className="seafoodSkin";
 	skinIndex=2;
 }
 
@@ -58,13 +58,13 @@ popupBackground.classList.remove('hide');
 
 		
 		if(value.skinIndex==0){
-			document.getElementById("letterPopupContents").className="whiteSkin";
+			document.getElementById("letterPopupContents").className="originalSkin";
 		}
 		else if(value.skinIndex==1){
-			document.getElementById("letterPopupContents").className="redSkin";
+			document.getElementById("letterPopupContents").className="oldSkin";
 		}
 		else if(value.skinIndex==2){
-			document.getElementById("letterPopupContents").className="blueSkin";
+			document.getElementById("letterPopupContents").className="seafoodSkin";
 
 			
 		}
@@ -100,7 +100,7 @@ function saveLetter(){
 function closeLetterPopup() {
 
 	timeObject=true;
-	setTimeout(cleanField, waveTimer);
+	setTimeout(sometimesCleanField, waveTimer);
 	const popup1 = document.querySelector('#letterPopup');
   popup1.classList.add('hide');
   const popup2 = document.querySelector('#letterPopupContents');
@@ -110,7 +110,7 @@ function closeLetterPopup() {
   popup2.classList.add("content");
 
   if(bottleNum==0){
-	cleanField();
+	sometimesCleanField();
   }
 }
 function writePopup() {
