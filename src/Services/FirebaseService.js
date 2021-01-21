@@ -49,3 +49,7 @@ function loadLetter(button) {
     })
 
 }
+
+function XSSfilter(origin) {
+    return origin.replace(/\<|\>|\"|\'|\%|\;|\(|\)|\&|\+|\-/g, "");
+}
