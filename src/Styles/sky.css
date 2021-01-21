@@ -1,7 +1,12 @@
+body {
+    overflow-x:hidden;
+    overflow-y:auto;
+}
+
 .sky {
         color : white;
         font-family: "휴면편지";
-
+        height : 20%
     }
 
     /*뇌우*/
@@ -113,12 +118,16 @@
     /*Time to finalise the cloud shape*/
 
 
-    /*구름*/
-    .cloud {
+    
+     /*구름*/
+
+     .cloud {
+        
         position:absolute;
         margin-top: 12px;
         width: 200px; height: 60px;
         background: #fff;
+        
         border-radius: 200px;
         -moz-border-radius: 200px;
         -webkit-border-radius: 200px;
@@ -127,6 +136,7 @@
     }
     
     .cloud:before, .cloud:after {
+        overflow:hidden;
         content: '';
         position: absolute; 
         background: #fff;
@@ -146,10 +156,6 @@
         width: 120px; height: 120px;
         top: -55px; left: auto; right: 15px;
     }
-
-
-    */
-
     
     /*Time to animate*/
     .x1 {
@@ -229,7 +235,12 @@
 
     /*비*/
 
+    .rain {
+    overflow:hidden;
+    }
+
     .drop {
+    overflow:hidden;
     position: absolute;
     /* 비 변경 전
     width: 0;
@@ -242,7 +253,6 @@
     border-right-width: 4px;
     border-left-width: 4px;
     */
-    margin-top: -100px;
     -webkit-transition: -webkit-transform 1.2s;
     transition: -webkit-transform 1.2s;
     -o-transition: -o-transform 1.2s;
@@ -264,7 +274,7 @@
 }
 
 .rain1 {
-    left: 100px;
+    left: 3%;
     top: -50px;    
     -webkit-animation:rain 1.1s linear 2.7s infinite;   
        -moz-animation:rain 1.1s linear 2.7s infinite;   
@@ -272,7 +282,7 @@
             animation:rain 1.1s linear 2.7s infinite;
 }
 .rain2 {
-    left: 200px;
+    left: 10%;
     top: -50px;     
     -webkit-animation:rain .9s linear 1s infinite;   
        -moz-animation:rain .9s linear 1s infinite;   
@@ -284,7 +294,7 @@
        -moz-animation:rain .9s linear 6.2s infinite;
          -o-animation:rain .9s linear 6.2s infinite;
             animation:rain .9s linear 6.2s infinite;
-    left: 300px;
+    left: 17%;
     top: -50px;    
 }
 .rain4 {
@@ -292,7 +302,7 @@
        -moz-animation:rain .8s linear 4.3s infinite;
          -o-animation:rain .8s linear 4.3s infinite;
             animation:rain .8s linear 4.3s infinite;
-    left: 400px;
+    left: 24%;
     top: -50px;    
 }
 .rain5 {
@@ -300,7 +310,7 @@
        -moz-animation:rain 1s linear 5.5s infinite;
          -o-animation:rain 1s linear 5.5s infinite;
             animation:rain 1s linear 5.5s infinite;
-    left: 500px;
+    left: 31%;
     top: -50px;    
 }
 .rain6 {
@@ -308,7 +318,7 @@
        -moz-animation:rain .9s linear 5.9s infinite;
          -o-animation:rain .9s linear 5.9s infinite;
             animation:rain .9s linear 5.9s infinite;
-    left: 600px;
+    left: 38%;
     top: -50px;    
 }
 .rain7 {
@@ -316,7 +326,7 @@
        -moz-animation:rain 1.3s linear 6.5s infinite;
          -o-animation:rain 1.3s linear 6.5s infinite;
             animation:rain 1.3s linear 6.5s infinite;
-    left: 700px;
+    left: 45%;
     top: -50px;    
 }
 .rain8 {
@@ -324,7 +334,7 @@
        -moz-animation:rain .9s linear 0.3s infinite;
          -o-animation:rain .9s linear 0.3s infinite;
             animation:rain .9s linear 0.3s infinite;
-    left: 800px;
+    left: 52%;
     top: -50px;    
 }
 .rain9 {
@@ -332,7 +342,7 @@
        -moz-animation:rain .8s linear 1.5s infinite;
          -o-animation:rain .8s linear 1.5s infinite;
             animation:rain .8s linear 1.5s infinite;
-    left: 900px;
+    left: 59%;
     top: -50px;    
 }
 .rain10 {
@@ -340,11 +350,11 @@
        -moz-animation:rain 1.2s linear 1.3s infinite;
          -o-animation:rain 1.2s linear 1.3s infinite;
             animation:rain 1.2s linear 1.3s infinite;
-    left: 1000px;
+    left: 66%;
     top: -50px;    
 }
 .rain11 {
-    left: 1100px;
+    left: 73%;
     top: -50px;    
     -webkit-animation:rain 1.1s linear 2.7s infinite;    
        -moz-animation:rain 1.1s linear 2.7s infinite;  
@@ -352,7 +362,7 @@
             animation:rain 1.1s linear 2.7s infinite;
 }
 .rain12 {
-    left: 1200px;
+    left: 80%;
     top: -50px;     
     -webkit-animation:rain .9s linear 1s infinite;     
        -moz-animation:rain .9s linear 1s infinite;   
@@ -364,7 +374,7 @@
        -moz-animation:rain .9s linear 6.2s infinite;
          -o-animation:rain .9s linear 6.2s infinite;
             animation:rain .9s linear 6.2s infinite;
-    left: 1300px;
+    left: 87%;
     top: -50px;    
 }
 .rain14 {
@@ -372,7 +382,7 @@
        -moz-animation:rain .8s linear 4.3s infinite;
          -o-animation:rain .8s linear 4.3s infinite;
             animation:rain .8s linear 4.3s infinite;
-    left: 1400px;
+    left: 94%;
     top: -50px;    
 }
 .rain15 {
@@ -380,7 +390,7 @@
        -moz-animation:rain 1s linear 5.5s infinite;
          -o-animation:rain 1s linear 5.5s infinite;
             animation:rain 1s linear 5.5s infinite;
-    left: 1500px;
+    left: 99%;
     top: -50px;    
 }
 @-webkit-keyframes rain
@@ -406,118 +416,6 @@
 
 
 /*해*/
-/*
-.sun { 
-    position: absolute;
-    top:5%;
-    right:5%;
-    height:100px;
-    width:100px;
-    border-radius:50%;	
-    background : #FFFFA2;
-    opacity:0.9;			
-    box-shadow: 0px 0px 40px 15px #FFFFA2;  
-  }
-  
-  .ray_box {
-    position: absolute;
-    margin: auto;
-    top:0px;
-    left:0;
-    right:0;
-    bottom:0;	
-    width:70px;  
-    -webkit-animation: ray_anim 120s linear infinite;
-    animation: ray_anim 120s linear infinite;
-  }
-  .ray {  
-      background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 100%);
-          background: linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 100%); 
-      margin-left:10px;
-      border-radius:80% 80% 0 0;
-      position:absolute;
-      opacity:0.1;
-      
-  }
-  
-  .ray1 {    
-      height:170px;
-      width:30px;
-     -webkit-transform: rotate(180deg);
-      top:-175px;
-      left: 15px;
-  }
-  .ray2 {
-      height:100px;
-      width:8px;
-     -webkit-transform: rotate(220deg);
-      top:-90px;
-      left: 75px;
-  }
-  .ray3 {
-      height:170px;
-      width:50px;
-     -webkit-transform: rotate(250deg);
-      top:-80px;
-      left: 100px;
-  }
-  .ray4 {
-      height:120px;
-      width:14px;
-     -webkit-transform: rotate(305deg);
-      top:30px;
-      left: 100px;
-  }
-  .ray5 {
-      height:140px;
-      width:30px;
-     -webkit-transform: rotate(-15deg);
-      top:60px;
-      left: 40px;
-  }
-  .ray6 {
-      height:90px;
-      width:50px;
-     -webkit-transform: rotate(30deg);
-      top:60px;
-      left: -40px;
-  }
-  .ray7 {
-      height:180px;
-      width:10px;
-     -webkit-transform: rotate(70deg);
-      top:-35px;
-      left: -40px;
-  }
-  .ray8 {
-      height:120px;
-      width:30px;
-     -webkit-transform: rotate(100deg);
-      top:-45px;
-      left:-90px;
-  }
-  .ray9 {
-      height:80px;
-      width:10px;
-     -webkit-transform: rotate(120deg);
-      top:-65px;
-      left:-60px;
-  }
-  .ray10 {
-      height:190px;
-      width:23px;
-     -webkit-transform: rotate(150deg);
-      top:-185px;
-      left: -60px;
-  }
-  
-  
-  @-webkit-keyframes ray_anim { 
-          0% { -webkit-transform: rotate(0deg); transform: rotate(0deg);}    
-      100% { -webkit-transform: rotate(360deg); transform: rotate(360deg);}
-  }
-    */
-
     .sun { 
         position:absolute;
         top:3%;
@@ -534,41 +432,7 @@
         }
     }
      
-
-  /*달 변경 전(초승달)
-  .moon { 
-  position:absolute;
-  top:3%;
-  right:3%;
-  height:100px;
-  width:100px;
-  background-color:transparent ;
-  border-radius:50px;
-  box-shadow:inset 30px -30px #ffffaa;
-  animation-name: rotate;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-    }
-    
-
-  @keyframes rotate
-{
-    0%
-    {
-    transform:rotate(-10deg);
-    }
-    50%
-    {
-    transform:rotate(10deg);
-    }
-    100%
-    {
-    transform:rotate(-10deg);
-    }
-    }
-    */
-
-    /*달 변경 후 보름달 */
+    /*달 */
     .moon { 
         position:absolute;
         top:3%;
@@ -578,22 +442,192 @@
         animation-duration: 3s;
         animation-iteration-count: infinite;
           }
-          
-      
+              
         @keyframes rotate
       {
           0%
           {
-          transform:rotate(-20deg);
+          transform:rotate(-30deg);
           }
           50%
           {
-          transform:rotate(20deg);
+          transform:rotate(4deg);
           }
           100%
           {
-          transform:rotate(-20deg);
+          transform:rotate(-30deg);
           }
+          }
+
+        /*별 */
+        @-webkit-keyframes blinker {
+            from {opacity: 1.0;}
+            to {opacity: 0.0;}
+          }
+          .star1{
+            position:absolute;
+            top:20%;
+            left:10%;
+            text-decoration: blink;
+            -webkit-animation-name: blinker;
+            -webkit-animation-duration: 1s;
+            -webkit-animation-iteration-count:infinite;
+            -webkit-animation-timing-function:ease-in-out;
+            -webkit-animation-direction: alternate;
+          }
+          .star2{
+            position:absolute;
+            top:5%;
+            left:20%;
+            text-decoration: blink;
+            -webkit-animation-name: blinker;
+            -webkit-animation-duration: 1s;
+            -webkit-animation-iteration-count:infinite;
+            -webkit-animation-timing-function:ease-in-out;
+            -webkit-animation-direction: alternate;
+          }
+          .star3{
+            position:absolute;
+            top:10%;
+            left:25%;
+            text-decoration: blink;
+            -webkit-animation-name: blinker;
+            -webkit-animation-duration: 1s;
+            -webkit-animation-iteration-count:infinite;
+            -webkit-animation-timing-function:ease-in-out;
+            -webkit-animation-direction: alternate;
+          }
+          .star4{
+            position:absolute;
+            top:25%;
+            left:30%;
+            text-decoration: blink;
+            -webkit-animation-name: blinker;
+            -webkit-animation-duration: 1s;
+            -webkit-animation-iteration-count:infinite;
+            -webkit-animation-timing-function:ease-in-out;
+            -webkit-animation-direction: alternate;
+          }
+          .star5{
+            position:absolute;
+            top:4%;
+            left:35%;
+            text-decoration: blink;
+            -webkit-animation-name: blinker;
+            -webkit-animation-duration: 1s;
+            -webkit-animation-iteration-count:infinite;
+            -webkit-animation-timing-function:ease-in-out;
+            -webkit-animation-direction: alternate;
+          }
+          .star6{
+            position:absolute;
+            top:16%;
+            left:40%;
+            text-decoration: blink;
+            -webkit-animation-name: blinker;
+            -webkit-animation-duration: 1s;
+            -webkit-animation-iteration-count:infinite;
+            -webkit-animation-timing-function:ease-in-out;
+            -webkit-animation-direction: alternate;
+          }
+          .star7{
+            position:absolute;
+            top:33%;
+            left:45%;
+            text-decoration: blink;
+            -webkit-animation-name: blinker;
+            -webkit-animation-duration: 1s;
+            -webkit-animation-iteration-count:infinite;
+            -webkit-animation-timing-function:ease-in-out;
+            -webkit-animation-direction: alternate;
+          }
+          .star8{
+            position:absolute;
+            top:8%;
+            left:50%;
+            text-decoration: blink;
+            -webkit-animation-name: blinker;
+            -webkit-animation-duration: 1s;
+            -webkit-animation-iteration-count:infinite;
+            -webkit-animation-timing-function:ease-in-out;
+            -webkit-animation-direction: alternate;
+          }
+          .star9{
+            position:absolute;
+            top:18%;
+            left:55%;
+            text-decoration: blink;
+            -webkit-animation-name: blinker;
+            -webkit-animation-duration: 1s;
+            -webkit-animation-iteration-count:infinite;
+            -webkit-animation-timing-function:ease-in-out;
+            -webkit-animation-direction: alternate;
+          }
+          .star10{
+            position:absolute;
+            top:32%;
+            left:60%;
+            text-decoration: blink;
+            -webkit-animation-name: blinker;
+            -webkit-animation-duration: 1s;
+            -webkit-animation-iteration-count:infinite;
+            -webkit-animation-timing-function:ease-in-out;
+            -webkit-animation-direction: alternate;
+          }
+          .star11{
+            position:absolute;
+            top:22%;
+            left:65%;
+            text-decoration: blink;
+            -webkit-animation-name: blinker;
+            -webkit-animation-duration: 1s;
+            -webkit-animation-iteration-count:infinite;
+            -webkit-animation-timing-function:ease-in-out;
+            -webkit-animation-direction: alternate;
+          }
+          .star12{
+            position:absolute;
+            top:4%;
+            left:70%;
+            text-decoration: blink;
+            -webkit-animation-name: blinker;
+            -webkit-animation-duration: 1s;
+            -webkit-animation-iteration-count:infinite;
+            -webkit-animation-timing-function:ease-in-out;
+            -webkit-animation-direction: alternate;
+          }
+          .star13{
+            position:absolute;
+            top:10%;
+            left:77%;
+            text-decoration: blink;
+            -webkit-animation-name: blinker;
+            -webkit-animation-duration: 1s;
+            -webkit-animation-iteration-count:infinite;
+            -webkit-animation-timing-function:ease-in-out;
+            -webkit-animation-direction: alternate;
+          }
+          .star14{
+            position:absolute;
+            top:30%;
+            left:80%;
+            text-decoration: blink;
+            -webkit-animation-name: blinker;
+            -webkit-animation-duration: 1s;
+            -webkit-animation-iteration-count:infinite;
+            -webkit-animation-timing-function:ease-in-out;
+            -webkit-animation-direction: alternate;
+          }
+          .star15{
+            position:absolute;
+            top:3%;
+            left:95%;
+            text-decoration: blink;
+            -webkit-animation-name: blinker;
+            -webkit-animation-duration: 1s;
+            -webkit-animation-iteration-count:infinite;
+            -webkit-animation-timing-function:ease-in-out;
+            -webkit-animation-direction: alternate;
           }
 
 
@@ -607,9 +641,10 @@
 
   /*기본 구름*/
 .cloudbasic {
+    margin: 0px;
+    overflow:hidden;
     position:absolute;
     top:25%;
     left:-4%;
     right:-11%;
 }
-
