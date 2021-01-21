@@ -1,19 +1,24 @@
 var bottleNum = 0;
 var maxBottleNum = 3;
-var spawnInterval = 500;
+var waveTimer=30000;
 
 var field;
 var fieldWidth;
 var fieldHeight;
 var wave;
+var waveDecorate;
+
+var timeObject=true;
 
 initialize();
 
+setTimeout(cleanField, waveTimer);
+console.time();
+
 function initialize() {
 
-    var initBottle=document.querySelector('#initializeBottle');
-    console.log(initBottle);
-    initBottle.onclick=function(){cleanField()};
+    //var initBottle=document.querySelector('#initializeBottle');
+    //initBottle.onclick=function(){cleanField()};
 
     field = document.querySelector('.bottleField');
     console.log(field);
@@ -21,29 +26,57 @@ function initialize() {
     fieldHeight = field.offsetHeight;
 
     wave = document.querySelector('.wave');
+    waveDecorate=document.querySelector('.waveDecorate');
+
     wave.addEventListener('animationend', () => {
         wave.classList.remove('wave');
         void wave.offsetWidth;
         wave.classList.add('wave');
-        wave.style.animationPlayState = "paused";
+        wave.style.animationPlayState = "paused"; 
     });
 
-    const animated = document.querySelector('.wave');
-    animated.addEventListener('animationend', () => {
-        var target = wave;
-        target.classList.remove('wave');
+    waveDecorate.addEventListener('animationend', () => {
+        var target = waveDecorate;
+        target.classList.remove('waveDecorate');
         void target.offsetWidth;
-        target.classList.add('wave');
+        target.classList.add('waveDecorate');
         target.style.animationPlayState = "paused";
     });
     spawnBottles();
 }
 
 function cleanField() {
+    console.timeEnd();
+    console.time();
+    setTimeout(cleanField, waveTimer);
+    console.log("필드를 지운다");
+    if(timeObject==true){
     var style = wave.style;
     style.animationPlayState = "running";
+    var style2 = waveDecorate.style;
+    style2.animationPlayState = "running";
     setTimeout(cleanBottle, 500);
     setTimeout(spawnBottles, 500);
+    console.log("필드를 지웠다");
+    }
+    console.log(timeObject);
+
+}
+
+function sometimesCleanField(){
+    console.timeEnd();
+    console.time();
+    console.log("나는 가끔 필드를");
+    if(timeObject==true){
+        var style = wave.style;
+        style.animationPlayState = "running";
+        var style2 = waveDecorate.style;
+        style2.animationPlayState = "running";
+        setTimeout(cleanBottle, 500);
+        setTimeout(spawnBottles, 500);
+        console.log("가끔 필드를 지운다");
+        }
+    console.log(timeObject);
 }
 
 function spawnBottle() {
@@ -57,7 +90,7 @@ function spawnBottle() {
     bottle.className = "bottleLetter";
     bottle.style.position = 'absolute';
     bottle.style.left = String((Math.random()*100)%100) + '%';
-    bottle.style.top = String((Math.random()*70)%100+30) + '%';
+    bottle.style.top = String((Math.random()*60)%100+40) + '%';
     bottle.style.height='100px';
     bottle.style.width='233px';
     bottle.style.zIndex = '0';
@@ -65,7 +98,18 @@ function spawnBottle() {
     bottle.style.borderColor= 'transparent';
     bottle.style.border= 'none';
     bottle.style.outline= 'none';
+
+    var bottleskin=Math.random();
+    if(bottleskin>0.5){
+        
     bottle.style.backgroundImage='url("../src/Assets/Images/bottle_lie_small.png")';
+    }
+    else{
+
+        bottle.style.backgroundImage='url("../src/Assets/Images/bottle_in sand_small.png")';
+        bottle.style.height="250px";
+        bottle.style.width="348px";
+    }
     
 
     var image = document.createElement('img');
@@ -82,12 +126,12 @@ function spawnBottle() {
 function spawnBottles() {
     for (var i = bottleNum; i < maxBottleNum; i++) {
         spawnBottle();
-        console.log("현석 선생님?");
     }
 }
 
 function deleteBottle(bottle) {
     bottle.parentNode.removeChild(bottle);
+    bottleNum-=1;
 }
 
 function cleanBottle() {
@@ -96,6 +140,5 @@ function cleanBottle() {
             deleteBottle(child);
             // beach.removeChild(child); 
             child = field.lastElementChild; 
-            bottleNum -= 1;
         } 
 }
