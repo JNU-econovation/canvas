@@ -1,17 +1,19 @@
 var bottleNum = 0;
 var maxBottleNum = 3;
-var waveTimer=5000;
+var waveTimer=30000;
 
 var field;
 var fieldWidth;
 var fieldHeight;
 var wave;
+var waveDecorate;
 
 var timeObject=true;
 
 initialize();
 
 setTimeout(cleanField, waveTimer);
+console.time();
 
 function initialize() {
 
@@ -24,43 +26,57 @@ function initialize() {
     fieldHeight = field.offsetHeight;
 
     wave = document.querySelector('.wave');
+    waveDecorate=document.querySelector('.waveDecorate');
+
     wave.addEventListener('animationend', () => {
         wave.classList.remove('wave');
         void wave.offsetWidth;
         wave.classList.add('wave');
-        wave.style.animationPlayState = "paused";
+        wave.style.animationPlayState = "paused"; 
     });
 
-    const animated = document.querySelector('.wave');
-    animated.addEventListener('animationend', () => {
-        var target = wave;
-        target.classList.remove('wave');
+    waveDecorate.addEventListener('animationend', () => {
+        var target = waveDecorate;
+        target.classList.remove('waveDecorate');
         void target.offsetWidth;
-        target.classList.add('wave');
+        target.classList.add('waveDecorate');
         target.style.animationPlayState = "paused";
     });
     spawnBottles();
 }
 
 function cleanField() {
-
+    console.timeEnd();
+    console.time();
+    setTimeout(cleanField, waveTimer);
+    console.log("필드를 지운다");
     if(timeObject==true){
     var style = wave.style;
     style.animationPlayState = "running";
-    setTimeout(cleanField, waveTimer);
+    var style2 = waveDecorate.style;
+    style2.animationPlayState = "running";
     setTimeout(cleanBottle, 500);
     setTimeout(spawnBottles, 500);
+    console.log("필드를 지웠다");
     }
+    console.log(timeObject);
 
 }
 
 function sometimesCleanField(){
+    console.timeEnd();
+    console.time();
+    console.log("나는 가끔 필드를");
     if(timeObject==true){
         var style = wave.style;
         style.animationPlayState = "running";
+        var style2 = waveDecorate.style;
+        style2.animationPlayState = "running";
         setTimeout(cleanBottle, 500);
         setTimeout(spawnBottles, 500);
+        console.log("가끔 필드를 지운다");
         }
+    console.log(timeObject);
 }
 
 function spawnBottle() {
@@ -82,7 +98,18 @@ function spawnBottle() {
     bottle.style.borderColor= 'transparent';
     bottle.style.border= 'none';
     bottle.style.outline= 'none';
+
+    var bottleskin=Math.random();
+    if(bottleskin>0.5){
+        
     bottle.style.backgroundImage='url("../src/Assets/Images/bottle_lie_small.png")';
+    }
+    else{
+
+        bottle.style.backgroundImage='url("../src/Assets/Images/bottle_in sand_small.png")';
+        bottle.style.height="250px";
+        bottle.style.width="348px";
+    }
     
 
     var image = document.createElement('img');
@@ -99,7 +126,6 @@ function spawnBottle() {
 function spawnBottles() {
     for (var i = bottleNum; i < maxBottleNum; i++) {
         spawnBottle();
-        console.log("현석 선생님?");
     }
 }
 

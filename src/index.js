@@ -83,9 +83,9 @@ popupBackground.classList.remove('hide');
 }
 
 function saveLetter(){
-	const writeContentxText=document.getElementById("writeContents").value;
-	console.log(writeContentxText);
-	writeLetter(document.getElementById("saveLetterButton"), writeContentxText, skinIndex).then(function(isDone){
+	var writeContentsText=document.getElementById("writeContents").value;
+	if(writeContentsText!=""){
+	writeLetter(document.getElementById("saveLetterButton"), writeContentsText, skinIndex).then(function(isDone){
 		if(isDone==true){
 			console.log("와!잘됐다!");
 		}
@@ -93,14 +93,24 @@ function saveLetter(){
 			console.log("와!안됐다!");
 		}
 	});
+	
+	document.getElementById("writeContents").value='';
+	
 	const popup4 = document.querySelector('#writePopup');
 	popup4.classList.add('hide');
+
+	
+	
+	}
+	else{
+		alert("빈 편지를 띄울수 없어요 TT");
+		closeWritePopup();
+	}
 }
 
 function closeLetterPopup() {
 
 	timeObject=true;
-	setTimeout(sometimesCleanField, waveTimer);
 	const popup1 = document.querySelector('#letterPopup');
   popup1.classList.add('hide');
   const popup2 = document.querySelector('#letterPopupContents');
@@ -114,6 +124,7 @@ function closeLetterPopup() {
   }
 }
 function writePopup() {
+	timeObject=false;
 	const popup3 = document.querySelector('#writePopup');
 
   popup3.classList.remove('hide');
@@ -136,6 +147,7 @@ function writePopup() {
 }
 
 function closeWritePopup() {
+	timeObject=true;
 	const popup4 = document.querySelector('#writePopup');
   popup4.classList.add('hide');
 }

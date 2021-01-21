@@ -8,7 +8,6 @@
   </head>
   <body>
 
-    <script type="text/javascript" src="../src/index.js"></script>
     
     <div class=sky>
       <span class= "js-date">
@@ -75,8 +74,14 @@
     
     </div>
     <div class="sea">
-      <div class="wave"></div>
     </div>
+      <li>
+        <div class="wave"></div>
+        <div class="waveDecorate"></div>
+      </li>
+      
+      
+    
     </div>
     <div class="sands">
       <div class="bottleField">
@@ -93,8 +98,8 @@
       <p>
         <h1 id="letterContents">원빈이 쓴 편지</h1>
       </p>
-      <button id="closeLetterButton" onclick="closeLetterPopup()">다시 띄워보내기</button>
     </div>
+    <button id="returnLetterButton" onclick="closeLetterPopup()"></button>
     </div>
     <div id="writePopup" class="hide">
       <li>
@@ -105,13 +110,14 @@
     <button id="oldWP" onclick="chooseOld()"></button>
     <button id="seafoodWP" onclick="chooseSeafood()"></button>
       </div>
-      
-      <h2 id="letterDate">date</h2>
-      
-      <input type="text" id="writeContents" autocomplete="off">
-      <button id="closeWriteButton" onclick="closeWritePopup()">닫기</button>
+        <h2 id="letterDate">date</h2>
+        <input type="text" id="writeContents" autocomplete="off">
+      </div>
+      <div>
+        <button id="closeWriteButton" onclick="closeWritePopup()"></button>
+        <button id="saveLetterButton" onclick="saveLetter()"></button>
+      </div>
     </div>
-    <button id="saveLetterButton" onclick="saveLetter()">띄워보내기</button>
     </div>
   </li>
 
@@ -127,6 +133,8 @@
       <script type="text/javascript" src="../src/weather1.js"></script>
 
       <script type="text/javascript" src="../src/sea.js"></script>
+      
+    <script type="text/javascript" src="../src/index.js"></script>
   </span>
 
 </html>

@@ -58,7 +58,8 @@ ul {
   height: 53px;
   z-index: 4;
   padding: 25px;
-  margin-left: 5%;
+  margin-left: 8%;
+  margin-top: 8%;
 }
 
 #oldWP {
@@ -72,7 +73,8 @@ ul {
   height: 53px;
   z-index: 4;
   padding: 25px;
-  margin-left: 5%;
+  margin-left: 8%;
+  margin-top: 8%;
 }
 
 #seafoodWP {
@@ -86,7 +88,8 @@ ul {
   height: 53px;
   z-index: 4;
   padding: 25px;
-  margin-left: 5%;
+  margin-left: 8%;
+  margin-top: 8%;
 }
 
 header {
@@ -98,8 +101,11 @@ header {
 }
 
 #writeContents {
+  margin-top: 10%;
+  margin-left: 8%;
   background: transparent;
   border-color: #eeeeee;
+  /*border-color: transparent;*/
   font-size: 30px;
 }
 
@@ -115,14 +121,56 @@ header {
   width: 120px;
   height: 120px;
   z-index: 4;
-  padding: 25px;
   margin-left: 40%;
 }
+
+#returnLetterButton {
+  background-color: transparent !important;
+  border-color: transparent;
+  border: none;
+  outline: none;
+  background-image: url("../Assets/Images/button_return_small.png");
+  width: 168px;
+  height: 53px;
+  z-index: 4;
+  margin-top: 4%;
+  margin-left: 35%;
+}
+
+#saveLetterButton {
+  background-color: transparent !important;
+  border-color: transparent;
+  border: none;
+  outline: none;
+  background-image: url("../Assets/Images/button_floating_small.png");
+  width: 168px;
+  height: 53px;
+  z-index: 4;
+  margin-left: 28%;
+  margin-top: 4%;
+}
+
+#closeWriteButton {
+  background-color: transparent !important;
+  border-color: transparent;
+  border: none;
+  outline: none;
+  background-image: url("../Assets/Images/button_cancel_small.png");
+  width: 168px;
+  height: 53px;
+  z-index: 4;
+  margin-top: 4%;
+  margin-left: 8%;
+}
+
 #closeButton {
+  /*
   border: none;
   outline: none;
   padding: 15px;
+  */
 }
+
 #bottle {
   background-color: transparent !important;
   padding-top: 70px;
@@ -167,25 +215,23 @@ header {
 }
 
 #letterPopupContents {
-  width: 500px;
-  height: 647px;
+  width: 640px;
+  height: 828px;
 }
 
 #writePopupContents {
-  width: 500px;
-  height: 647px;
+  width: 640px;
+  height: 828px;
 }
 
 #letterContents {
-  margin: auto;
-  align-items: center;
+  margin-top: 10%;
+  margin-left: 8%;
+  /*margin: auto;
+  align-items: center;*/
   /*margin-right: 10%;
   margin-top: 20%;
   margin-bottom: 20%;*/
-}
-
-#closeLetterButton {
-  margin-left: 40%;
 }
 
 #letterPopup.hide {
