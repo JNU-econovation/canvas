@@ -8,7 +8,6 @@
   </head>
   <body>
 
-    <script type="text/javascript" src="../src/index.js"></script>
     
     <div class=sky>
       <span class= "js-date">
@@ -75,9 +74,14 @@
     
     </div>
     <div class="sea">
-      <div class="wave"></div>
     </div>
-      바다
+      <li>
+        <div class="wave"></div>
+        <div class="waveDecorate"></div>
+      </li>
+      
+      
+    
     </div>
     <div class="sands">
       <div class="bottleField">
@@ -85,36 +89,37 @@
       </div>
     
     </section>
-    <section class="UpNext">
-      <ul>
+      </div>
 <!--<li><button id="bottle" onclick="letterPopup()"></button></li>-->
-<li><button id="writeButton" onclick="writePopup()">편지쓰기</button></li>
-<li><button id="initializeBottle">편지새로고침</button></li>
-</ul>
-    </section>
+<button id="writeButton" onclick="writePopup()"></button>
+<!--<li><button id="initializeBottle">편지새로고침</button></li>-->
     <div id="letterPopup" class="hide">
     <div id="letterPopupContents" class="content, hide">
       <p>
         <h1 id="letterContents">원빈이 쓴 편지</h1>
       </p>
-      <button id="closeLetterButton" onclick="closeLetterPopup()">다시 띄워보내기</button>
     </div>
+    <button id="returnLetterButton" onclick="closeLetterPopup()"></button>
     </div>
     <div id="writePopup" class="hide">
-    <div class="content">
-      <div id="writePopupContents">
-      <p>
-        <h2 id="letterDate">date</h2>
-        <input type="text" id="writeContents" autocomplete="off" style="background: transparent;">
+      <li>
+      <div id="writePopupContents" class="originalSkin">
       </p>
-      <button id="closeWriteButton" onclick="closeWritePopup()">닫기</button>
-      <button id="saveLetterButton" onclick="saveLetter()">띄워보내기</button>
+      <div>
+    <button id="originalWP" onclick="chooseOriginal()"></button>
+    <button id="oldWP" onclick="chooseOld()"></button>
+    <button id="seafoodWP" onclick="chooseSeafood()"></button>
+      </div>
+        <h2 id="letterDate">date</h2>
+        <input type="text" id="writeContents" autocomplete="off">
+      </div>
+      <div>
+        <button id="closeWriteButton" onclick="closeWritePopup()"></button>
+        <button id="saveLetterButton" onclick="saveLetter()"></button>
       </div>
     </div>
-    <button id="whiteWP" onclick="chooseWhite()">하양</button>
-    <button id="redWP" onclick="chooseRed()">빨강</button>
-    <button id="blueWP" onclick="chooseBlue()">파랑</button>
     </div>
+  </li>
 
     </div>
     </body>
@@ -128,6 +133,8 @@
       <script type="text/javascript" src="../src/weather1.js"></script>
 
       <script type="text/javascript" src="../src/sea.js"></script>
+      
+    <script type="text/javascript" src="../src/index.js"></script>
   </span>
 
 </html>

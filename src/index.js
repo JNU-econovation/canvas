@@ -28,26 +28,29 @@ var postData = {
 
 var skinIndex=0;
 
-function chooseWhite(){
+function chooseOriginal(){
 	//const writingPad = document.querySelector('#writePopup');
 
-	document.getElementById("writePopupContents").className="whiteSkin";
+	document.getElementById("writePopupContents").className="originalSkin";
 	skinIndex=0;
 }
 
-function chooseRed(){
-	document.getElementById("writePopupContents").className="redSkin";
+function chooseOld(){
+	document.getElementById("writePopupContents").className="oldSkin";
 	skinIndex=1;
 }
 
-function chooseBlue(){
-	document.getElementById("writePopupContents").className="blueSkin";
+function chooseSeafood(){
+	document.getElementById("writePopupContents").className="seafoodSkin";
 	skinIndex=2;
 }
 
 function letterPopup(button) {
+timeObject=false;
+
 	const popupBackground=document.getElementById("letterPopup");
 popupBackground.classList.remove('hide');
+
 
 	var string = document.getElementById("letterContents");
 	loadLetter(button).then(value => { 
@@ -55,13 +58,13 @@ popupBackground.classList.remove('hide');
 
 		
 		if(value.skinIndex==0){
-			document.getElementById("letterPopupContents").className="whiteSkin";
+			document.getElementById("letterPopupContents").className="originalSkin";
 		}
 		else if(value.skinIndex==1){
-			document.getElementById("letterPopupContents").className="redSkin";
+			document.getElementById("letterPopupContents").className="oldSkin";
 		}
 		else if(value.skinIndex==2){
-			document.getElementById("letterPopupContents").className="blueSkin";
+			document.getElementById("letterPopupContents").className="seafoodSkin";
 
 			
 		}
@@ -71,7 +74,7 @@ popupBackground.classList.remove('hide');
 		popup1.classList.remove('hide');
 
 		string.innerText= value.content;
-		
+		deleteBottle(button);
 });
 
 
@@ -80,9 +83,9 @@ popupBackground.classList.remove('hide');
 }
 
 function saveLetter(){
-	const writeContentxText=document.getElementById("writeContents").value;
-	console.log(writeContentxText);
-	writeLetter(document.getElementById("saveLetterButton"), writeContentxText, skinIndex).then(function(isDone){
+	var writeContentsText=document.getElementById("writeContents").value;
+	if(writeContentsText!=""){
+	writeLetter(document.getElementById("saveLetterButton"), writeContentsText, skinIndex).then(function(isDone){
 		if(isDone==true){
 			console.log("와!잘됐다!");
 		}
@@ -90,11 +93,24 @@ function saveLetter(){
 			console.log("와!안됐다!");
 		}
 	});
+	
+	document.getElementById("writeContents").value='';
+	
 	const popup4 = document.querySelector('#writePopup');
 	popup4.classList.add('hide');
+
+	
+	
+	}
+	else{
+		alert("빈 편지를 띄울수 없어요 TT");
+		closeWritePopup();
+	}
 }
 
 function closeLetterPopup() {
+
+	timeObject=true;
 	const popup1 = document.querySelector('#letterPopup');
   popup1.classList.add('hide');
   const popup2 = document.querySelector('#letterPopupContents');
@@ -102,8 +118,13 @@ function closeLetterPopup() {
 
 
   popup2.classList.add("content");
+
+  if(bottleNum==0){
+	sometimesCleanField();
+  }
 }
 function writePopup() {
+	timeObject=false;
 	const popup3 = document.querySelector('#writePopup');
 
   popup3.classList.remove('hide');
@@ -126,6 +147,7 @@ function writePopup() {
 }
 
 function closeWritePopup() {
+	timeObject=true;
 	const popup4 = document.querySelector('#writePopup');
   popup4.classList.add('hide');
 }

@@ -35,16 +35,61 @@ ul {
   list-style: none;
 }
 
-.whiteSkin {
+.originalSkin {
+  background-image: url("../Assets/Images/letter_original_small.png");
+}
+
+.oldSkin {
   background-image: url("../Assets/Images/letter_old_small.png");
 }
 
-.redSkin {
-  background-image: url("../Assets/Images/letter-original.png");
+.seafoodSkin {
+  background-image: url("../Assets/Images/letter_seafood_small.png");
 }
 
-.blueSkin {
-  background-image: url("../Assets/Images/letter_seafood.png");
+#originalWP {
+  float: left;
+  background-color: transparent !important;
+  border-color: transparent;
+  border: none;
+  outline: none;
+  background-image: url("../Assets/Images/lettericon_original_small.png");
+  width: 50px;
+  height: 53px;
+  z-index: 4;
+  padding: 25px;
+  margin-left: 8%;
+  margin-top: 8%;
+}
+
+#oldWP {
+  float: left;
+  background-color: transparent !important;
+  border-color: transparent;
+  border: none;
+  outline: none;
+  background-image: url("../Assets/Images/lettericon_old_small.png");
+  width: 50px;
+  height: 53px;
+  z-index: 4;
+  padding: 25px;
+  margin-left: 8%;
+  margin-top: 8%;
+}
+
+#seafoodWP {
+  float: left;
+  background-color: transparent !important;
+  border-color: transparent;
+  border: none;
+  outline: none;
+  background-image: url("../Assets/Images/lettericon_seafood_small.png");
+  width: 50px;
+  height: 53px;
+  z-index: 4;
+  padding: 25px;
+  margin-left: 8%;
+  margin-top: 8%;
 }
 
 header {
@@ -55,15 +100,77 @@ header {
   color: var(--white-color);
 }
 
+#writeContents {
+  margin-top: 10%;
+  margin-left: 8%;
+  background: transparent;
+  border-color: #eeeeee;
+  /*border-color: transparent;*/
+  font-size: 30px;
+}
+
 #writeButton {
-  padding: 25px;
+  background-color: transparent !important;
+  border-color: transparent;
+  border: none;
+  outline: none;
+  background-image: url("../Assets/Images/write_button_small.png");
+  position: fixed;
+  right: 2%;
+  bottom: 2%;
+  width: 120px;
+  height: 120px;
+  z-index: 4;
   margin-left: 40%;
 }
+
+#returnLetterButton {
+  background-color: transparent !important;
+  border-color: transparent;
+  border: none;
+  outline: none;
+  background-image: url("../Assets/Images/button_return_small.png");
+  width: 168px;
+  height: 53px;
+  z-index: 4;
+  margin-top: 4%;
+  margin-left: 35%;
+}
+
+#saveLetterButton {
+  background-color: transparent !important;
+  border-color: transparent;
+  border: none;
+  outline: none;
+  background-image: url("../Assets/Images/button_floating_small.png");
+  width: 168px;
+  height: 53px;
+  z-index: 4;
+  margin-left: 28%;
+  margin-top: 4%;
+}
+
+#closeWriteButton {
+  background-color: transparent !important;
+  border-color: transparent;
+  border: none;
+  outline: none;
+  background-image: url("../Assets/Images/button_cancel_small.png");
+  width: 168px;
+  height: 53px;
+  z-index: 4;
+  margin-top: 4%;
+  margin-left: 8%;
+}
+
 #closeButton {
+  /*
   border: none;
   outline: none;
   padding: 15px;
+  */
 }
+
 #bottle {
   background-color: transparent !important;
   padding-top: 70px;
@@ -108,20 +215,23 @@ header {
 }
 
 #letterPopupContents {
-  width: 500px;
-  height: 647px;
+  width: 640px;
+  height: 828px;
+}
+
+#writePopupContents {
+  width: 640px;
+  height: 828px;
 }
 
 #letterContents {
-  margin: auto;
-  align-items: center;
+  margin-top: 10%;
+  margin-left: 8%;
+  /*margin: auto;
+  align-items: center;*/
   /*margin-right: 10%;
   margin-top: 20%;
   margin-bottom: 20%;*/
-}
-
-#closeLetterButton {
-  margin-left: 40%;
 }
 
 #letterPopup.hide {
@@ -168,7 +278,7 @@ header {
   border: none;
   outline: none;
 }
-
+/*
 body > .info {
   background-color: #c3bebc;
 }
@@ -177,3 +287,4 @@ body > .info {
   padding: 90px;
   background-color: #c3bebc;
 }
+*/
