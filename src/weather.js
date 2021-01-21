@@ -36,25 +36,32 @@ function getWeather(lat, lng){
                 document.querySelector(".snowflakes").style.display="none";
                 document.querySelector(".clouds").style.display="block";
                 document.querySelector(".rain").style.display="block";
+                document.querySelector(".sun").style.display="none";    //비올 때 해X
+                document.querySelector(".star").style.display="none";   //비올 때 별X
+                document.body.style.backgroundColor = "#878787"; //배경색 회색
             }
             else if( id < 600) {  // 300~600 비
                 document.querySelector(".thunder").style.display="none";
                 document.querySelector(".snowflakes").style.display="none";
                 document.querySelector(".clouds").style.display="block";
                 document.querySelector(".rain").style.display="block";
-                document.body.style.backgroundColor = "#CFCFCF"; //배경색 회색
+                document.querySelector(".sun").style.display="none";    //비올 때 해X
+                document.querySelector(".star").style.display="none";   //비올 때 별X
+                document.body.style.backgroundColor = "#878787"; //배경색 회색
             }
             else if( id < 700) {   // 600~700 눈
                 document.querySelector(".thunder").style.display="none";
                 document.querySelector(".snowflakes").style.display="blcok";
                 document.querySelector(".clouds").style.display="none";
                 document.querySelector(".rain").style.display="none";
+                document.querySelector(".sun").style.display="none";    //눈올 때 해X
+                document.querySelector(".star").style.display="none";   //비올 때 별X
 
             }
             else if( id == 800) {  // 800 : 맑음
                 document.querySelector(".thunder").style.display="none";
                 document.querySelector(".snowflakes").style.display="none";
-                document.querySelector(".clouds").style.display="none";
+                document.querySelector(".clouds").style.display="blcok";
                 document.querySelector(".rain").style.display="none";
             }
             else if( id < 900) {   // 700~900 : 흐림
@@ -66,7 +73,7 @@ function getWeather(lat, lng){
             else { // 애니메이션 X
                 document.querySelector(".thunder").style.display="none";
                 document.querySelector(".snowflakes").style.display="none";
-                document.querySelector(".clouds").style.display="none";
+                document.querySelector(".clouds").style.display="blcok";
                 document.querySelector(".rain").style.display="none";
             }
 
