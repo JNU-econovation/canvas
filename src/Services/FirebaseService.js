@@ -4,6 +4,8 @@ function writeLetter(button, content, skinIndex) {
     var offsetVal;
     var serverTime;
 
+    content = XSSfilter(content);
+
     return new Promise((resolve, reject) => {
         firebase.database().ref("/.info/serverTimeOffset")
         .once('value', function(offset) {
