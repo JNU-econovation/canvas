@@ -55,7 +55,6 @@ function getWeather(lat, lng){
                 document.querySelector(".clouds").style.display="none";
                 document.querySelector(".rain").style.display="none";
                 document.querySelector(".sun").style.display="none";    //눈올 때 해X
-                document.querySelector(".star").style.display="none";   //비올 때 별X
 
             }
             else if( id == 800) {  // 800 : 맑음
