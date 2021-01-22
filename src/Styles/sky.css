@@ -9,9 +9,11 @@ body {
 }
 
 .sky {
-        color : rgb(179, 162, 162);
+        color :white;
         font-family: "휴면편지";
         height : 200px;
+        margin-top: 0px;
+        font-weight: bold;;
         
     }
 
@@ -361,8 +363,8 @@ body {
 /*해*/
         .sun {             
             position:absolute;
-            top:3%;
-            right:3%;
+            top:5%;
+            right:12%;
             background-color:transparent ;
             
             animation-name: scaleup;   /* 확대 애니메이션*/
@@ -374,7 +376,7 @@ body {
             {
               0%
               {
-                transform:scale(,1); 
+                transform:scale(1,1); 
               }
               50%
               {
@@ -402,7 +404,7 @@ body {
         .moon { 
             position:absolute;
             top:3%;
-            right:3%;
+            right:10%;
             background-color:transparent ;
             animation-name: rotate;
             animation-duration: 3s;
@@ -637,6 +639,7 @@ body {
           	0% { 
                   margin-left: 100%;
                   top:260px;
+
               }
               29% { 
                   margin-left: 50%; 
@@ -693,10 +696,6 @@ body {
 
 /*기본 구름*/
         .cloudbasic {
-            margin: 0px;
-            overflow:hidden;
-            position:absolute;
-            top: 27%;
-            left:-4%;
-            right:-11%;
+            position: absolute;
+            top: 100px;
         }

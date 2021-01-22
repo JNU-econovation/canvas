@@ -22,8 +22,9 @@ function getWeather(lat, lng){
             const icon = json.weather[0].icon;
 
             weather.innerText= 
-            `현재 위치 : ${place} \n 현재 기온 : ${temperature} \n 날씨id : ${id}`;
-           
+            //`현재 위치 : ${place} \n 현재 기온 : ${temperature} \n 날씨id : ${id}`;
+            `  ${temperature}℃ in ${place}  `;
+            
             //날씨 id값 별 배경 애니메이션 조절
             if( id < 200) {  // 애니메이션 X
                 document.querySelector(".thunder").style.display="block";
