@@ -1,4 +1,6 @@
 .sea {
+  overflow: hidden;
+  margin-top : -180px;
   height: 10vw;
   width: 100%;
   min-height: 100px;
@@ -35,6 +37,7 @@
 
   width: 100%;
   height: 100px;
+
 }
 
 .waveDecorate {
