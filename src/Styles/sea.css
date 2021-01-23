@@ -12,7 +12,7 @@
 }
 
 .sands {
-  height: 1400px;
+  height: 1700px;
   width: 100%;
   background: #e7ce94;
 }
@@ -50,10 +50,10 @@
   animation-iteration-count: 1;
   animation-play-state: paused;
 
-  background-image: url("../Assets/Images/wave_small.png");
+  background-image: url("../Assets/Images/wave_under_small.png  ");
 
   width: 100%;
-  height: 537px;
+  height: 348px;
 }
 
 @keyframes wave-animation {
@@ -61,7 +61,7 @@
     transform: scaleY(1);
   }
   50% {
-    transform: scaleY(12);
+    transform: scaleY(17);
   }
   100% {
     transform: scaleY(1);
@@ -73,7 +73,7 @@
     transform: translateY(0);
   }
   50% {
-    transform: translateY(1074px);
+    transform: translateY(1500px);
   }
   100% {
     transform: translateY(0);

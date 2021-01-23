@@ -1,6 +1,6 @@
 var bottleNum = 0;
 var maxBottleNum = 3;
-var waveTimer=30000;
+var waveTimer=25000;
 
 var field;
 var fieldWidth;
@@ -46,10 +46,7 @@ function initialize() {
 }
 
 function cleanField() {
-    console.timeEnd();
-    console.time();
     setTimeout(cleanField, waveTimer);
-    console.log("필드를 지운다");
     if(timeObject==true){
     var style = wave.style;
     style.animationPlayState = "running";
@@ -57,16 +54,12 @@ function cleanField() {
     style2.animationPlayState = "running";
     setTimeout(cleanBottle, 500);
     setTimeout(spawnBottles, 500);
-    console.log("필드를 지웠다");
     }
     console.log(timeObject);
 
 }
 
 function sometimesCleanField(){
-    console.timeEnd();
-    console.time();
-    console.log("나는 가끔 필드를");
     if(timeObject==true){
         var style = wave.style;
         style.animationPlayState = "running";
@@ -74,7 +67,6 @@ function sometimesCleanField(){
         style2.animationPlayState = "running";
         setTimeout(cleanBottle, 500);
         setTimeout(spawnBottles, 500);
-        console.log("가끔 필드를 지운다");
         }
     console.log(timeObject);
 }

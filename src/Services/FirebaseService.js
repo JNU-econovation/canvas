@@ -34,8 +34,9 @@ function loadLetter(button) {
     return new Promise((resolve, reject) => {
         firebase.database().ref().child('letters').once('value').then((snapshot) => {
             var length = snapshot.numChildren();
-            var randNum = Math.floor( Math.random() * 10 ) % length;
+            var randNum = Math.floor( Math.random() * length );
             var count = 0;
+            console.log(randNum);
 
             snapshot.forEach(function(child) {
                 if (count == randNum) {
@@ -45,10 +46,13 @@ function loadLetter(button) {
                 count += 1;
             });
 
+            
             button.disabled = false;
             resolve(ret);
         });
     })
+
+    
 
 }
 
