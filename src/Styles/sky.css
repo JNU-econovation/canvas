@@ -20,15 +20,17 @@ body {
 
     /*기본 구름*/
     .cloudleft {
+        overflow: hidden;
         position:absolute;
         top:100px;
         left:0%;
         }
 
         .cloudright{
+        overflow: hidden;
         position:absolute;
         top:100px;
-        left:69%
+        right: 0%;
         }
 
  /*뇌우*/
