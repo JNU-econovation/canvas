@@ -1,6 +1,6 @@
 var bottleNum = 0;
 var maxBottleNum = 3;
-var waveTimer=30000;
+var waveTimer=25000;
 
 var field;
 var fieldWidth;
