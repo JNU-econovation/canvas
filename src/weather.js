@@ -39,7 +39,7 @@ function getWeather(lat, lng){
                 document.querySelector(".rain").style.display="block";
                 document.querySelector(".sun").style.display="none";    //비올 때 해X
                 document.querySelector(".star").style.display="none";   //비올 때 별X
-                document.body.style.backgroundColor = "#878787"; //배경색 회색
+                document.querySelector(".sky").style.background = "#878787"; //배경색 회색
             }
             else if( id < 600) {  // 300~600 비
                 document.querySelector(".thunder").style.display="none";
@@ -48,7 +48,7 @@ function getWeather(lat, lng){
                 document.querySelector(".rain").style.display="block";
                 document.querySelector(".sun").style.display="none";    //비올 때 해X
                 document.querySelector(".star").style.display="none";   //비올 때 별X
-                document.body.style.backgroundColor = "#878787"; //배경색 회색
+                document.querySelector(".sky").style.background = "#878787"; //배경색 회색
             }
             else if( id < 700) {   // 600~700 눈
                 document.querySelector(".thunder").style.display="none";
