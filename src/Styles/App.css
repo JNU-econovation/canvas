@@ -101,12 +101,16 @@ header {
 }
 
 #writeContents {
-  margin-top: 10%;
-  margin-left: 8%;
+  margin-top: 5%;
+  margin-left: 14%;
+  outline: none;
+  width: 460px;
+  height: 500px;
   background: transparent;
   border-color: #eeeeee;
   /*border-color: transparent;*/
-  font-size: 30px;
+  font-size: 22px;
+  font-family: "맑은 고딕";
 }
 
 #writeButton {
@@ -122,6 +126,11 @@ header {
   height: 120px;
   z-index: 4;
   margin-left: 40%;
+}
+
+#letterDate {
+  margin-top: 5%;
+  margin-left: 10%;
 }
 
 #returnLetterButton {
@@ -225,13 +234,19 @@ header {
 }
 
 #letterContents {
-  margin-top: 10%;
-  margin-left: 8%;
+  margin-top: 20%;
+  margin-left: 18%;
+  margin-right: 18%;
+  font-size: 22px;
   /*margin: auto;
   align-items: center;*/
   /*margin-right: 10%;
   margin-top: 20%;
   margin-bottom: 20%;*/
+}
+
+#letterLength {
+  font-size: 30px;
 }
 
 #letterPopup.hide {

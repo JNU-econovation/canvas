@@ -158,7 +158,8 @@
     <button id="seafoodWP" onclick="chooseSeafood()"></button>
       </div>
         <h2 id="letterDate">date</h2>
-        <input type="text" id="writeContents" autocomplete="off">
+        <textarea type="text" maxlength="299" cols="20" rows="10" id="writeContents" autocomplete="off" onkeyup="countingLength()"></textarea>
+        <div id="letterLength">(0/300)</div>
       </div>
       <div>
         <button id="closeWriteButton" onclick="closeWritePopup()"></button>
