@@ -27,11 +27,12 @@ else if(current.getHours() < 20) {
 }
 else if(current.getHours() < 24) {
     document.body.style.backgroundColor = "#000000"; //검정
+   
        
 }
 
 
-document.write("현재 시간 : ");
-document.write(current.getHours(), "시,");
-document.write(current.getMinutes(), "분,");
-document.write(current.getSeconds(), "초<br>");
+//document.write("현재 시간 : ");
+document.write(current.getHours(), " : ");
+document.write(current.getMinutes(), " : ");
+document.write(current.getSeconds(), "<br>");
