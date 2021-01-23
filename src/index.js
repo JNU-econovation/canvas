@@ -45,6 +45,11 @@ function chooseSeafood(){
 	skinIndex=2;
 }
 
+function countingLength(){
+	var letterLength=document.getElementById("writeContents").value.length;
+	document.getElementById("letterLength").innerHTML="("+letterLength+"/300)";
+}
+
 function letterPopup(button) {
 timeObject=false;
 
@@ -86,12 +91,6 @@ function saveLetter(){
 	var writeContentsText=document.getElementById("writeContents").value;
 	if(writeContentsText!=""){
 	writeLetter(document.getElementById("saveLetterButton"), writeContentsText, skinIndex).then(function(isDone){
-		if(isDone==true){
-			console.log("와!잘됐다!");
-		}
-		else{
-			console.log("와!안됐다!");
-		}
 	});
 	
 	document.getElementById("writeContents").value='';
@@ -133,13 +132,14 @@ function writePopup() {
 	var dd = today.getDate();
 	var mm = today.getMonth() + 1; //January is 0!
 	var yyyy = today.getFullYear();
+	var hh = today.getHours();
 	if (dd < 10) {
 	  dd = '0' + dd;
 	}
 	if (mm < 10) {
 	  mm = '0' + mm;
 	}
-	var today = mm + '/' + dd + '/' + yyyy;
+	var today = yyyy + '. ' + mm + '. ' + dd + " " + hh + "시";
 
 	var string = document.getElementById("letterDate");
 	string.innerText=today;
@@ -149,5 +149,6 @@ function writePopup() {
 function closeWritePopup() {
 	timeObject=true;
 	const popup4 = document.querySelector('#writePopup');
+	document.getElementById("writeContents").value='';
   popup4.classList.add('hide');
 }
