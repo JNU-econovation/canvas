@@ -11,6 +11,7 @@ body {
 }
 
 .sky {
+        overflow : hidden;
         color :white;
         font-family: "휴면편지";
         font-size : 1.3rem;
@@ -455,7 +456,7 @@ body {
           }
         .star1{
           position:absolute;
-          top:20%;
+          top:10%;
           left:10%;
           text-decoration: blink;
           -webkit-animation-name: blinker;
@@ -466,7 +467,7 @@ body {
         }
         .star2{
           position:absolute;
-          top:5%;
+          top:3%;
           left:20%;
           text-decoration: blink;
           -webkit-animation-name: blinker;
@@ -488,8 +489,8 @@ body {
         }
         .star4{
           position:absolute;
-          top:25%;
-          left:30%;
+          top:33%;
+          left:28%;
           text-decoration: blink;
           -webkit-animation-name: blinker;
           -webkit-animation-duration: 1.3s;
@@ -576,8 +577,8 @@ body {
         }
         .star12{
           position:absolute;
-          top:4%;
-          left:70%;
+          top:7%;
+          left:68%;
           text-decoration: blink;
           -webkit-animation-name: blinker;
           -webkit-animation-duration: 1.3s;
@@ -598,8 +599,8 @@ body {
         }
         .star14{
           position:absolute;
-          top:30%;
-          left:80%;
+          top:20%;
+          left:23%;
           text-decoration: blink;
           -webkit-animation-name: blinker;
           -webkit-animation-duration: 1.3s;
@@ -653,7 +654,7 @@ body {
           }
           .star19{
             position:absolute;
-            top:35%;
+            top:25%;
             left:35%;
             text-decoration: blink;
             -webkit-animation-name: blinker;
@@ -673,10 +674,22 @@ body {
             -webkit-animation-timing-function:ease-in-out;
             -webkit-animation-direction: alternate;
           }
+          .star21{
+            position:absolute;
+            top:30%;
+            left:70%;
+            text-decoration: blink;
+            -webkit-animation-name: blinker;
+            -webkit-animation-duration: 1.3s;
+            -webkit-animation-iteration-count:infinite;
+            -webkit-animation-timing-function:ease-in-out;
+            -webkit-animation-direction: alternate;
+          }
+
 
 /*갈매기*/
         .seagull {
-            top:16%;
+            top:100px;
             object-fit: cover;
             overflow: hidden;
              position:absolute;
