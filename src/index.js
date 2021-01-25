@@ -144,6 +144,7 @@ function writePopup() {
 	var string = document.getElementById("letterDate");
 	string.innerText=today;
 	//document.getElementById("letterDate").innerHTML=replacedString;
+	console.log("편지쓰기");
 }
 
 function closeWritePopup() {
