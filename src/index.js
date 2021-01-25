@@ -47,7 +47,7 @@ function chooseSeafood(){
 
 function countingLength(){
 	var letterLength=document.getElementById("writeContents").value.length;
-	document.getElementById("letterLength").innerHTML="("+letterLength+"/300)";
+	document.getElementById("letterLength").innerHTML="("+letterLength+"/500)";
 }
 
 function letterPopup(button) {
@@ -79,12 +79,36 @@ popupBackground.classList.remove('hide');
 		popup1.classList.remove('hide');
 
 		string.innerText= value.content;
+		document.getElementById("letterDate").innerHTML=convertTimestampToDate(value.timestamp);
+
 		deleteBottle(button);
 });
 
 
 	
 
+}
+
+function convertTimestampToDate(timestamp) {
+    var d = new Date(timestamp);
+    var formatted_string = 
+        pasteZero(d.getFullYear(), 4) + '-' +
+        pasteZero(d.getMonth() + 1, 2) + '-' +
+        pasteZero(d.getDate(), 2) + ' ' +
+        pasteZero(d.getHours(), 2) + '시';
+
+    function pasteZero(n, digits) {
+        var zero = '';
+        n = n.toString();
+      
+        if (n.length < digits) {
+          for (i = 0; i < digits - n.length; i++)
+            zero += '0';
+        }
+        return zero + n;
+    } 
+
+    return formatted_string;
 }
 
 function saveLetter(){
@@ -141,11 +165,25 @@ function writePopup() {
 	}
 	var today = yyyy + '. ' + mm + '. ' + dd + " " + hh + "시";
 
-	var string = document.getElementById("letterDate");
+	var string = document.getElementById("writeDate");
 	string.innerText=today;
 	//document.getElementById("letterDate").innerHTML=replacedString;
 	console.log("편지쓰기");
 }
+function infoPopup() {
+	timeObject=false;
+	const popup3 = document.querySelector('#infoPopup');
+	console.log("infoPopup");
+  popup3.classList.remove('hide');
+
+}
+
+function closeInfoPopup(){
+	timeObject=true;
+	const popup4 = document.querySelector('#infoPopup');
+  popup4.classList.add('hide');
+}
+
 
 function closeWritePopup() {
 	timeObject=true;

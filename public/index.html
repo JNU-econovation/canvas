@@ -130,17 +130,35 @@
     
     </div>
     <div class="sands">
+      
+      <div id="crab_red">라라랄라랄</div>
       <div class="bottleField">
         
       </div>
-    
-    </section>
+        
+        <span id="flag"></span>
+        
+        <span id="pot"></span>
+        
+        <span id="sandcastle"></span>
+        
+        <span id="starfish"></span>
+        
+        <span id="umbrella"></span>
       </div>
+      <button id="infoButton" onclick="infoPopup()"></button>
       <button id="writeButton" onclick="writePopup()"></button>
+      <div id="infoPopup" class="hide">
+        <li>
+          <div id="infoContents"></div>
+          <div id="closeInfoButton" onclick="closeInfoPopup"></div>
+        </li>
+      </div>
     <div id="letterPopup" class="hide">
       <li>
     <div id="letterPopupContents" class="content, hide">
         <h1 id="letterContents">원빈이 쓴 편지</h1>
+    <div id="letterDate">letterDate</div>
     </div>
     <div>
     <button id="returnLetterButton" onclick="closeLetterPopup()"></button>
@@ -156,9 +174,9 @@
     <button id="oldWP" onclick="chooseOld()"></button>
     <button id="seafoodWP" onclick="chooseSeafood()"></button>
       </div>
-        <div id="letterDate">date</div>
-        <textarea type="text" maxlength="299" cols="20" rows="10" id="writeContents" autocomplete="off" onkeyup="countingLength()"></textarea>
-        <div id="letterLength">(0/300)</div>
+        <div id="writeDate">date</div>
+        <textarea type="text" maxlength="499" cols="20" rows="10" id="writeContents" autocomplete="off" onkeyup="countingLength()"></textarea>
+        <div id="letterLength">(0/500)</div>
       </div>
       <div>
         <button id="closeWriteButton" onclick="closeWritePopup()"></button>
