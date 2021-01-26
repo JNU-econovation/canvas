@@ -101,16 +101,19 @@ function spawnBottle() {
         bottle.style.backgroundImage='url("../src/Assets/Images/bottle_base_small.png")';
         bottle.style.height="229px";
         bottle.style.width="77px";
+        bottle.style.zIndex="10";
     }
     else if(bottleskin<0.75){
         bottle.style.backgroundImage='url("../src/Assets/Images/bottle_in sand_2.png")';
         bottle.style.height="111px";
         bottle.style.width="141px";
+        bottle.style.zIndex="10";
     }
     else{
         bottle.style.backgroundImage='url("../src/Assets/Images/bottle_starfish_small.png")';
         bottle.style.height="220px";
         bottle.style.width="77px";
+        bottle.style.zIndex="10";
     }
     
 
