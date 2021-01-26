@@ -24,6 +24,7 @@
 #crab_red {
   width: 142px;
   height: 109px;
+  position: relative;
   z-index: 8;
   background-image: url(../Assets/Images/crab_red_small.png);
 }
