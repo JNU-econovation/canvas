@@ -118,6 +118,7 @@ function saveLetter(){
 	});
 	
 	document.getElementById("writeContents").value='';
+	document.getElementById("letterLength").innerHTML='(0/500)';
 	
 	const popup4 = document.querySelector('#writePopup');
 	popup4.classList.add('hide');
@@ -189,5 +190,7 @@ function closeWritePopup() {
 	timeObject=true;
 	const popup4 = document.querySelector('#writePopup');
 	document.getElementById("writeContents").value='';
+	
+	document.getElementById("letterLength").innerHTML='(0/500)';
   popup4.classList.add('hide');
 }
