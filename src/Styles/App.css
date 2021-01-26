@@ -191,8 +191,8 @@ header {
   width: 500px;
   height: 40px;
   position: relative;
-  left: 8%;
-  top: 70px;
+  left: 30px;
+  top: 90px;
   font-size: 22px;
   font-family: "Gaegu", cursive;
 }
@@ -200,7 +200,7 @@ header {
 #letterDate {
   position: relative;
   margin-left: 55%;
-  top: 71%;
+  top: 100px;
 
   font-family: "Gaegu", cursive;
 }
