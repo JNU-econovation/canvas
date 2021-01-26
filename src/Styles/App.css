@@ -102,7 +102,7 @@ ul {
   height: 43px;
   z-index: 4;
   margin-left: 14%;
-  margin-top: 7%;
+  margin-top: 10%;
   margin-bottom: 3%;
 }
 
@@ -118,7 +118,7 @@ ul {
   z-index: 4;
 
   margin-left: 4%;
-  margin-top: 7%;
+  margin-top: 10%;
 }
 
 #seafoodWP {
@@ -132,7 +132,7 @@ ul {
   height: 43px;
   z-index: 4;
   margin-left: 4%;
-  margin-top: 7%;
+  margin-top: 10%;
 }
 
 header {
@@ -144,8 +144,8 @@ header {
 }
 
 #writeContents {
-  margin-top: 5%;
-  margin-left: 13.5%;
+  margin-top: 0%;
+  margin-left: 13.8%;
   outline: none;
   width: 380px;
   height: 450px;
@@ -189,14 +189,20 @@ header {
 
 #writeDate {
   width: 300px;
-  height: 20px;
-  margin-left: 20%;
+  height: 40px;
+  position: fixed;
+  left: 51%;
+  top: -21%;
+  margin-right: 5%;
   font-size: 22px;
   font-family: "맑은 고딕";
-  margin-top: 0%;
+  margin-top: 17%;
 }
 
 #letterDate {
+  position: fixed;
+  margin-left: 18%;
+  top: 71%;
 }
 
 #returnLetterButton {
@@ -234,8 +240,8 @@ header {
   width: 168px;
   height: 53px;
   z-index: 4;
-  margin-top: 4%;
-  margin-left: 7%;
+  margin-top: 8%;
+  margin-left: 5%;
 }
 
 #closeButton {
@@ -307,10 +313,10 @@ header {
 }
 
 #letterContents {
-  margin-top: 0%;
+  margin-top: 5%;
   margin-left: 18%;
   margin-right: 18%;
-  font-size: 22px;
+  font-size: 16px;
   /*margin: auto;
   align-items: center;*/
   /*margin-right: 10%;
