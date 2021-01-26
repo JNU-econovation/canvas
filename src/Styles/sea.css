@@ -96,7 +96,7 @@
   z-index: 8;
   width: 292px;
   height: 234px;
-  top: 280%;
+  top: 275%;
   left: 70%;
   background-image: url(../Assets/Images/ball_small.png);
 }
@@ -144,7 +144,7 @@
 .wave {
   position: relative;
 
-  z-index: 1;
+  z-index: 20;
   background: transparent;
   background-color: transparent;
   transition: all ease 0s;
@@ -163,7 +163,7 @@
 
 .waveDecorate {
   position: absolute;
-  z-index: 1;
+  z-index: 21;
   background: transparent;
   background-color: transparent;
   transition: all ease 0s;

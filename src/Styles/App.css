@@ -100,7 +100,7 @@ ul {
   background-image: url("../Assets/Images/lettericon_original_small.png");
   width: 40px;
   height: 43px;
-  z-index: 4;
+  z-index: 54;
   margin-left: 14%;
   margin-top: 10%;
   margin-bottom: 3%;
@@ -115,7 +115,7 @@ ul {
   background-image: url("../Assets/Images/lettericon_old_small.png");
   width: 40px;
   height: 43px;
-  z-index: 4;
+  z-index: 54;
 
   margin-left: 4%;
   margin-top: 10%;
@@ -130,7 +130,7 @@ ul {
   background-image: url("../Assets/Images/lettericon_seafood_small.png");
   width: 40px;
   height: 43px;
-  z-index: 4;
+  z-index: 54;
   margin-left: 4%;
   margin-top: 10%;
 }
@@ -167,7 +167,7 @@ header {
   bottom: 2%;
   width: 120px;
   height: 120px;
-  z-index: 4;
+  z-index: 54;
   margin-left: 40%;
   margin-bottom: 0.6%;
 }
@@ -183,7 +183,7 @@ header {
   bottom: 3%;
   width: 60px;
   height: 60px;
-  z-index: 4;
+  z-index: 54;
   margin-left: 40%;
 }
 
@@ -213,7 +213,7 @@ header {
   background-image: url("../Assets/Images/button_return_small.png");
   width: 168px;
   height: 53px;
-  z-index: 4;
+  z-index: 54;
   margin-left: 35%;
   margin-top: 4%;
 }
@@ -226,7 +226,7 @@ header {
   background-image: url("../Assets/Images/button_floating_small.png");
   width: 168px;
   height: 53px;
-  z-index: 4;
+  z-index: 54;
   margin-left: 24%;
   margin-top: 4%;
 }
@@ -274,7 +274,7 @@ header {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.7);
-  z-index: 4;
+  z-index: 54;
 
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
@@ -289,7 +289,7 @@ header {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.7);
-  z-index: 4;
+  z-index: 50;
 
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
