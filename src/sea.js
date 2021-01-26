@@ -92,15 +92,25 @@ function spawnBottle() {
     bottle.style.outline= 'none';
 
     var bottleskin=Math.random();
-    if(bottleskin>0.5){
+    if(bottleskin<0.25){
         
     bottle.style.backgroundImage='url("../src/Assets/Images/bottle_lie_small.png")';
     }
-    else{
+    else if(bottleskin<0.5){
 
-        bottle.style.backgroundImage='url("../src/Assets/Images/bottle_in sand_small.png")';
-        bottle.style.height="250px";
-        bottle.style.width="348px";
+        bottle.style.backgroundImage='url("../src/Assets/Images/bottle_base_small.png")';
+        bottle.style.height="229px";
+        bottle.style.width="77px";
+    }
+    else if(bottleskin<0.75){
+        bottle.style.backgroundImage='url("../src/Assets/Images/bottle_in sand_2.png")';
+        bottle.style.height="111px";
+        bottle.style.width="141px";
+    }
+    else{
+        bottle.style.backgroundImage='url("../src/Assets/Images/bottle_starfish_small.png")';
+        bottle.style.height="220px";
+        bottle.style.width="77px";
     }
     
 
