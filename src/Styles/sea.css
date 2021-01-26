@@ -1,6 +1,7 @@
 .sea {
   overflow: hidden;
-  margin-top : -180px;
+
+  margin-top : -160px;
   height: 10vw;
   width: 100%;
   min-height: 100px;
@@ -11,6 +12,7 @@
   position: relative;
   height: 80%;
   width: 80%;
+  z-index: 1;
 }
 
 .sands {
@@ -19,6 +21,45 @@
   background: #e7ce94;
 }
 
+#crab_red {
+  width: 142px;
+  height: 109px;
+  z-index: 8;
+  background-image: url(../Assets/Images/crab_red_small.png);
+}
+
+#umbrella {
+  top: 520px;
+  left: 500px;
+  width: 515px;
+  height: 395px;
+  background-color: transparent;
+  background-image: url(../Assets/Images/umbrella_small.png);
+}
+
+#starfish {
+  width: 99px;
+  height: 96px;
+  background-image: url(../Assets/Images/starfish_small.png);
+}
+
+#pot {
+  width: 142;
+  height: 109;
+  background-image: url(../Assets/Images/crab_red_small.png);
+}
+
+#sandcastle {
+  width: 142;
+  height: 109;
+  background-image: url(../Assets/Images/crab_red_small.png);
+}
+
+#flag {
+  width: 142;
+  height: 109;
+  background-image: url(../Assets/Images/crab_red_small.png);
+}
 .wave {
   position: relative;
 
@@ -37,7 +78,6 @@
 
   width: 100%;
   height: 100px;
-
 }
 
 .waveDecorate {

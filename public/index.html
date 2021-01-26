@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
     <meta content="yes" name="apple-mobile-web-app-capable" />
     <meta content="minimum-scale=1.0, width=device-width, maximum-scale=1, user-scalable=no" name="viewport" />
@@ -9,7 +10,7 @@
     <link href="../src/Styles/sky.css" link rel="stylesheet" /> 
     <script src="http://code.jquery.com/jquery-latest.js"></script>
   </head>
-  
+
   <body>
    
     <div class= "sky">
@@ -143,43 +144,62 @@
     
     </div>
     <div class="sands">
+      
+      <div id="crab_red">라라랄라랄</div>
       <div class="bottleField">
         
       </div>
-    
-    </section>
+        
+        <span id="flag"></span>
+        
+        <span id="pot"></span>
+        
+        <span id="sandcastle"></span>
+        
+        <span id="starfish"></span>
+        
+        <span id="umbrella"></span>
       </div>
-<!--<li><button id="bottle" onclick="letterPopup()"></button></li>-->
-<button id="writeButton" onclick="writePopup()"></button>
-<!--<li><button id="initializeBottle">편지새로고침</button></li>-->
+      <button id="infoButton" onclick="infoPopup()"></button>
+      <button id="writeButton" onclick="writePopup()"></button>
+      <div id="infoPopup" class="hide">
+        <li>
+          <div id="infoContents"></div>
+          <div id="closeInfoButton" onclick="closeInfoPopup"></div>
+        </li>
+      </div>
     <div id="letterPopup" class="hide">
+      <li>
     <div id="letterPopupContents" class="content, hide">
-      <p>
         <h1 id="letterContents">원빈이 쓴 편지</h1>
-      </p>
+    <div id="letterDate">letterDate</div>
     </div>
+    <div>
     <button id="returnLetterButton" onclick="closeLetterPopup()"></button>
+    </div>
+  </li>
     </div>
     <div id="writePopup" class="hide">
       <li>
       <div id="writePopupContents" class="originalSkin">
-      </p>
-      <div>
+        <div id="writeIconBox">
+      <div id="wpBox">
     <button id="originalWP" onclick="chooseOriginal()"></button>
     <button id="oldWP" onclick="chooseOld()"></button>
     <button id="seafoodWP" onclick="chooseSeafood()"></button>
       </div>
-        <h2 id="letterDate">date</h2>
-        <textarea type="text" maxlength="299" cols="20" rows="10" id="writeContents" autocomplete="off" onkeyup="countingLength()"></textarea>
-        <div id="letterLength">(0/300)</div>
+        <div id="writeDate">date</div>
+        </div>
+        <textarea type="text" maxlength="499" cols="20" rows="10" id="writeContents" autocomplete="off" onkeyup="countingLength()"></textarea>
+        <div id="letterLength">(0/500)</div>
       </div>
       <div>
         <button id="closeWriteButton" onclick="closeWritePopup()"></button>
         <button id="saveLetterButton" onclick="saveLetter()"></button>
       </div>
+    </li>
     </div>
-    </div>
-  </li>
+
 
     </div>
     </body>
