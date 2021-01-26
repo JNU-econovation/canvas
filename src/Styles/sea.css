@@ -1,7 +1,7 @@
 .sea {
   overflow: hidden;
 
-  margin-top : -160px;
+  margin-top: -160px;
   height: 10vw;
   width: 100%;
   min-height: 100px;
@@ -10,61 +10,141 @@
 
 .bottleField {
   position: relative;
-  height: 80%;
-  width: 80%;
-  z-index: 1;
+  height: 90%;
+  width: 90%;
+  z-index: 10;
 }
 
 .sands {
-  height: 1700px;
+  height: 2600px;
   width: 100%;
   background: #e7ce94;
 }
 
-#crab_red {
-  width: 142px;
-  height: 109px;
-  position: relative;
-  z-index: 8;
+#crabRed {
+  width: 156px;
+  height: 120px;
+  top: 150%;
+  left: 15%;
+  position: absolute;
+  z-index: 9;
   background-image: url(../Assets/Images/crab_red_small.png);
 }
 
 #umbrella {
-  top: 520px;
-  left: 500px;
-  width: 515px;
-  height: 395px;
-  background-color: transparent;
+  position: absolute;
+  top: 98%;
+  left: -7%;
+  width: 700px;
+  height: 533px;
+  z-index: 8;
   background-image: url(../Assets/Images/umbrella_small.png);
 }
 
 #starfish {
-  width: 99px;
-  height: 96px;
+  width: 97px;
+  height: 94px;
+  top: 86%;
+  left: 87%;
+  z-index: 8;
+  position: absolute;
   background-image: url(../Assets/Images/starfish_small.png);
 }
 
 #pot {
-  width: 142;
-  height: 109;
-  background-image: url(../Assets/Images/crab_red_small.png);
+  width: 214px;
+  height: 166px;
+  top: 210%;
+  left: 35%;
+  z-index: 9;
+  position: absolute;
+  background-image: url(../Assets/Images/pot_small.png);
 }
 
 #sandcastle {
-  width: 142;
-  height: 109;
-  background-image: url(../Assets/Images/crab_red_small.png);
+  width: 337px;
+  height: 456px;
+  top: 170%;
+  left: 45%;
+  z-index: 8;
+  position: absolute;
+  background-image: url(../Assets/Images/sandcastle_small.png);
 }
 
 #flag {
-  width: 142;
-  height: 109;
-  background-image: url(../Assets/Images/crab_red_small.png);
+  width: 185px;
+  height: 200px;
+  top: 210%;
+  left: 65%;
+  z-index: 8;
+  position: absolute;
+  background-image: url(../Assets/Images/flag_small.png);
 }
+
+#shellRed {
+  position: absolute;
+  z-index: 8;
+  top: 100%;
+  left: 60%;
+  width: 134px;
+  height: 98px;
+  background-image: url(../Assets/Images/shell_red_small.png);
+}
+
+#ball {
+  position: absolute;
+  z-index: 8;
+  width: 292px;
+  height: 234px;
+  top: 275%;
+  left: 70%;
+  background-image: url(../Assets/Images/ball_small.png);
+}
+
+#sandle {
+  position: absolute;
+  z-index: 8;
+  width: 258px;
+  height: 323px;
+  top: 310%;
+  left: 5%;
+  background-image: url(../Assets/Images/sandle_small.png);
+}
+
+#shell1 {
+  position: absolute;
+  z-index: 8;
+  top: 90%;
+  left: 40%;
+  width: 94px;
+  height: 77px;
+  background-image: url(../Assets/Images/shell1_small.png);
+}
+
+#shell2 {
+  position: absolute;
+  z-index: 8;
+  top: 190%;
+  left: 28%;
+  width: 74px;
+  height: 100px;
+  background-image: url(../Assets/Images/shell2_small.png);
+}
+
+#shell3 {
+  position: absolute;
+  z-index: 8;
+  top: 294%;
+  left: 22%;
+  width: 59px;
+  height: 61px;
+  background-image: url(../Assets/Images/shell3_small.png);
+}
+
 .wave {
   position: relative;
 
-  z-index: 1;
+  z-index: 20;
   background: transparent;
   background-color: transparent;
   transition: all ease 0s;
@@ -83,7 +163,7 @@
 
 .waveDecorate {
   position: absolute;
-  z-index: 1;
+  z-index: 21;
   background: transparent;
   background-color: transparent;
   transition: all ease 0s;
