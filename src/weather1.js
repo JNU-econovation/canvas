@@ -29,5 +29,5 @@ else if(current.getHours() < 24) {
     document.querySelector(".sun").style.display="none";    //0-5 해X
     document.querySelector(".moon").style.display="block";   //0-5 달O
     document.querySelector(".star").style.display="block";   //0-5  별O
-    document.querySelector(".seagull").style.display="block"; //갈매기X
+    document.querySelector(".seagull").style.display="none"; //갈매기X
 } 

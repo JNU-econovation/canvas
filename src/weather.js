@@ -61,7 +61,7 @@ function getWeather(lat, lng){
             else if( id == 800) {  // 800 : 맑음
                 document.querySelector(".thunder").style.display="none";
                 document.querySelector(".snowflakes").style.display="none";
-                document.querySelector(".clouds").style.display="blcok";
+                document.querySelector(".clouds").style.display="none";
                 document.querySelector(".rain").style.display="none";
             }
             else if( id < 900) {   // 700~900 : 흐림
