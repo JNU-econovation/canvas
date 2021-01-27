@@ -117,6 +117,7 @@ function saveLetter(){
 	writeLetter(document.getElementById("saveLetterButton"), writeContentsText, skinIndex).then(function(isDone){
 	});
 	
+	document.getElementById("writePopupContents").className="originalSkin";
 	document.getElementById("writeContents").value='';
 	document.getElementById("letterLength").innerHTML='(0/500)';
 	
