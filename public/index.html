@@ -163,9 +163,9 @@
 
       </div>
       
-      <button id="infoButton" onclick="infoPopup()"></button>
-      <button id="writeButton" onclick="writePopup()"></button>
-      <div id="infoPopup" class="hide">
+      <button id="infoButton" onclick="infoPopup()" title="둥둥 사용법"></button>
+      <button id="writeButton" onclick="writePopup()"" title="편지 쓰기"></button>
+      <div id="infoPopup" class="hide" onclick="closeInfoPopup()">
         <li>
           <div id="infoContents"></div>
           <div id="closeInfoButton" onclick="closeInfoPopup"></div>
