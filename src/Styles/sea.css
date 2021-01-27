@@ -106,8 +106,8 @@
   z-index: 8;
   width: 258px;
   height: 323px;
-  top: 310%;
-  left: 5%;
+  top: 300%;
+  left: 15%;
   background-image: url(../Assets/Images/sandle_small.png);
 }
 
@@ -134,8 +134,8 @@
 #shell3 {
   position: absolute;
   z-index: 8;
-  top: 294%;
-  left: 22%;
+  top: 274%;
+  left: 32%;
   width: 59px;
   height: 61px;
   background-image: url(../Assets/Images/shell3_small.png);

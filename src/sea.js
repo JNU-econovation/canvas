@@ -91,8 +91,9 @@ function spawnBottle() {
         (((bottleLeft<50)&&(bottleLeft>25))&&((bottleTop<60)&&(bottleTop>41.5)))||
         (((bottleLeft<71.3)&&(bottleLeft>39))&&((bottleTop<54.4)&&(bottleTop>28)))||
         (((bottleLeft<100)&&(bottleLeft>63.6))&&((bottleTop<82)&&(bottleTop>62.4)))||
-        ((bottleLeft<22))&&((bottleTop<100)&&((bottleTop<97)&&(bottleTop>73.6)))||
-        (bottleTop<14)
+        (((bottleLeft<36)&&(bottleLeft>2)))&&((bottleTop<100)&&((bottleTop<95)&&(bottleTop>71.6)))||
+        (bottleTop<14)||
+        (bottleLeft>97)
         )
         {
         bottleLeft = String((Math.random()*100)%100);
