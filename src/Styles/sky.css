@@ -4,8 +4,8 @@
 }
 
 html {
-    overflow-y:auto;  
     overflow-x: hidden;
+    overflow-y:auto;  
 }
 
 body {
@@ -151,7 +151,7 @@ body {
         .cloud1 {
             overflow: hidden;
             position:absolute;
-            top:14%;
+            top:105px;
             -webkit-animation: movingclouds 80s linear infinite;
             -moz-animation: movingclouds 80s linear infinite;
             -o-animation: movingclouds 80s linear infinite;
@@ -160,7 +160,7 @@ body {
         .cloud2 {
             overflow: hidden;
             position:absolute;
-            top:8%;     
+            top:55px;    
             -webkit-animation: movingclouds 105s linear infinite;
             -moz-animation: movingclouds 105s linear infinite;
             -o-animation: movingclouds 105s linear infinite;
@@ -169,7 +169,7 @@ body {
         .cloud3 {
             overflow: hidden;
             position:absolute;
-            top:25%;          
+            top:210px;          
             -webkit-transform: scale(0.9);
             -moz-transform: scale(0.9);
             -ms-transform: scale(0.9);
@@ -183,7 +183,7 @@ body {
         .cloud4 {
             overflow: hidden;
             position:absolute;
-            top:20%;       
+            top:160px;       
             -webkit-transform: scale(0.8);
             -moz-transform: scale(0.8);
             -ms-transform: scale(0.8);
@@ -197,7 +197,7 @@ body {
         .cloud5 {
             overflow: hidden;
             position:absolute;
-            top:2%;           
+            top:5px;           
             -webkit-transform: scale(0.7);
             -moz-transform: scale(0.7);
             -ms-transform: scale(0.7);
