@@ -215,7 +215,7 @@ header {
   height: 53px;
   z-index: 54;
   margin-left: 35%;
-  margin-top: 4%;
+  margin-top: 0.5%;
 }
 
 #saveLetterButton {
@@ -228,7 +228,7 @@ header {
   height: 53px;
   z-index: 54;
   margin-left: 24%;
-  margin-top: 4%;
+  margin-top: 0.5%;
 }
 
 #closeWriteButton {
@@ -240,7 +240,7 @@ header {
   width: 168px;
   height: 53px;
   z-index: 4;
-  margin-top: 8%;
+  margin-top: 0%;
   margin-left: 5%;
 }
 
@@ -297,11 +297,13 @@ header {
 
 #letterPopupContents {
   padding-top: 14%;
+  margin-top: 2%;
   width: 520px;
   height: 673px;
 }
 
 #writePopupContents {
+  margin-top: 2%;
   width: 520px;
   height: 673px;
 }
