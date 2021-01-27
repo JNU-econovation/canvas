@@ -24,7 +24,7 @@
 #crabRed {
   width: 156px;
   height: 120px;
-  top: 150%;
+  top: 170%;
   left: 15%;
   position: absolute;
   z-index: 9;
@@ -151,7 +151,7 @@
   transform-origin: top;
   animation-name: wave-animation;
   animation-delay: 0s;
-  animation-duration: 1s;
+  animation-duration: 2s;
   animation-iteration-count: 1;
   animation-play-state: paused;
 
@@ -170,7 +170,7 @@
   transform-origin: bottom;
   animation-name: waveDeco-animation;
   animation-delay: 0s;
-  animation-duration: 1s;
+  animation-duration: 2s;
   animation-iteration-count: 1;
   animation-play-state: paused;
 
@@ -185,7 +185,7 @@
     transform: scaleY(1);
   }
   50% {
-    transform: scaleY(17);
+    transform: scaleY(27);
   }
   100% {
     transform: scaleY(1);
@@ -197,7 +197,7 @@
     transform: translateY(0);
   }
   50% {
-    transform: translateY(1500px);
+    transform: translateY(2500px);
   }
   100% {
     transform: translateY(0);
