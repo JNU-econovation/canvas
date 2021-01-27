@@ -16,7 +16,7 @@
 }
 
 .sands {
-  height: 2600px;
+  height: 2900px;
   width: 100%;
   background: #e7ce94;
 }
@@ -33,7 +33,7 @@
 
 #umbrella {
   position: absolute;
-  top: 98%;
+  top: 112%;
   left: -7%;
   width: 700px;
   height: 533px;
@@ -44,7 +44,7 @@
 #starfish {
   width: 97px;
   height: 94px;
-  top: 86%;
+  top: 100%;
   left: 87%;
   z-index: 8;
   position: absolute;
@@ -72,19 +72,19 @@
 }
 
 #flag {
-  width: 185px;
-  height: 200px;
+  width: 273px;
+  height: 241px;
   top: 210%;
   left: 65%;
   z-index: 8;
   position: absolute;
-  background-image: url(../Assets/Images/flag_small.png);
+  background-image: url(../Assets/Images/flag_shadow.png);
 }
 
 #shellRed {
   position: absolute;
   z-index: 8;
-  top: 100%;
+  top: 120%;
   left: 60%;
   width: 134px;
   height: 98px;
@@ -114,7 +114,7 @@
 #shell1 {
   position: absolute;
   z-index: 8;
-  top: 90%;
+  top: 100%;
   left: 40%;
   width: 94px;
   height: 77px;

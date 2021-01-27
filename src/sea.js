@@ -87,12 +87,12 @@ function spawnBottle() {
     bottleTop = String((Math.random()*100)%100);
     console.log(bottleLeft+" ,"+bottleTop);
     while(
-        ((bottleLeft<31)&&(bottleTop<33.6))||
-        (((bottleLeft<48)&&(bottleLeft>27))&&((bottleTop<62)&&(bottleTop>47.5)))||
-        (((bottleLeft<69.3)&&(bottleLeft>41))&&((bottleTop<62.4)&&(bottleTop>36)))||
-        (((bottleLeft<100)&&(bottleLeft>51.6))&&((bottleTop<90)&&(bottleTop>71.4)))||
-        ((bottleLeft<20))&&((bottleTop<100)&&(bottleTop>85.6))||
-        (bottleTop<12)
+        ((bottleLeft<33)&&(bottleTop<35.6))||
+        (((bottleLeft<50)&&(bottleLeft>25))&&((bottleTop<60)&&(bottleTop>41.5)))||
+        (((bottleLeft<71.3)&&(bottleLeft>39))&&((bottleTop<54.4)&&(bottleTop>28)))||
+        (((bottleLeft<100)&&(bottleLeft>63.6))&&((bottleTop<82)&&(bottleTop>62.4)))||
+        ((bottleLeft<22))&&((bottleTop<100)&&((bottleTop<97)&&(bottleTop>73.6)))||
+        (bottleTop<14)
         )
         {
         bottleLeft = String((Math.random()*100)%100);
@@ -100,8 +100,8 @@ function spawnBottle() {
     }
     bottle.style.left = bottleLeft + '%';
     bottle.style.top = bottleTop + '%';
-    bottle.style.height='100px';8
-    bottle.style.width='233px';
+    bottle.style.height='76px';
+    bottle.style.width='250px';
     bottle.style.zIndex = '0';
     bottle.style.backgroundColor='transparent';
     bottle.style.borderColor= 'transparent';
@@ -111,25 +111,25 @@ function spawnBottle() {
     var bottleskin=Math.random();
     if(bottleskin<0.25){
         
-    bottle.style.backgroundImage='url("../src/Assets/Images/bottle_lie_small.png")';
+    bottle.style.backgroundImage='url("../src/Assets/Images/bottle_lie_shadow_small.png")';
     }
     else if(bottleskin<0.5){
 
-        bottle.style.backgroundImage='url("../src/Assets/Images/bottle_base_small.png")';
-        bottle.style.height="229px";
-        bottle.style.width="77px";
+        bottle.style.backgroundImage='url("../src/Assets/Images/bottle_base_shadow_small.png")';
+        bottle.style.height="220px";
+        bottle.style.width="179px";
         bottle.style.zIndex="10";
     }
     else if(bottleskin<0.75){
-        bottle.style.backgroundImage='url("../src/Assets/Images/bottle_in sand_2.png")';
-        bottle.style.height="111px";
-        bottle.style.width="141px";
+        bottle.style.backgroundImage='url("../src/Assets/Images/bottle_in sand_shadow_small.png")';
+        bottle.style.height="123px";
+        bottle.style.width="170px";
         bottle.style.zIndex="10";
     }
     else{
-        bottle.style.backgroundImage='url("../src/Assets/Images/bottle_starfish_small.png")';
+        bottle.style.backgroundImage='url("../src/Assets/Images/bottle_starfish_shadow_small.png")';
         bottle.style.height="220px";
-        bottle.style.width="77px";
+        bottle.style.width="173px";
         bottle.style.zIndex="10";
     }
     
