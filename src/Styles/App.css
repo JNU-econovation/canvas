@@ -324,9 +324,9 @@ header {
 }
 
 #infoContents {
-  background-image: url("../Assets/Images/letter_original_small.png");
-  width: 520px;
-  height: 673px;
+  background-image: url("../Assets/Images/info_small.png");
+  width: 550px;
+  height: 711px;
 }
 
 #letterContents {
