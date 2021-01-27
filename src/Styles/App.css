@@ -211,11 +211,11 @@ header {
   border: none;
   outline: none;
   background-image: url("../Assets/Images/button_return_small.png");
-  width: 168px;
-  height: 53px;
+  width: 130px;
+  height: 41px;
   z-index: 54;
-  margin-left: 35%;
-  margin-top: 0.5%;
+  margin-left: 38%;
+  margin-top: 2%;
 }
 
 #saveLetterButton {
@@ -224,11 +224,11 @@ header {
   border: none;
   outline: none;
   background-image: url("../Assets/Images/button_floating_small.png");
-  width: 168px;
-  height: 53px;
+  width: 130px;
+  height: 41px;
   z-index: 54;
-  margin-left: 24%;
-  margin-top: 0.5%;
+  margin-left: 29%;
+  margin-top: 2%;
 }
 
 #closeWriteButton {
@@ -237,11 +237,11 @@ header {
   border: none;
   outline: none;
   background-image: url("../Assets/Images/button_cancel_small.png");
-  width: 168px;
-  height: 53px;
+  width: 130px;
+  height: 41px;
   z-index: 4;
   margin-top: 0%;
-  margin-left: 5%;
+  margin-left: 10.5%;
 }
 
 #closeButton {
