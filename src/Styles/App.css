@@ -317,6 +317,8 @@ header {
   margin-left: 18%;
   margin-right: 18%;
   font-size: 16px;
+  height: 380px;
+  overflow-y: scroll;
 
   font-family: "Gaegu", cursive;
   /*margin: auto;
@@ -324,6 +326,10 @@ header {
   /*margin-right: 10%;
   margin-top: 20%;
   margin-bottom: 20%;*/
+}
+
+#letterContents::-webkit-scrollbar {
+  width: 5px;
 }
 
 #letterLength {

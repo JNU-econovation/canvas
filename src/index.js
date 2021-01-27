@@ -191,6 +191,8 @@ function closeWritePopup() {
 	const popup4 = document.querySelector('#writePopup');
 	document.getElementById("writeContents").value='';
 	
+	document.getElementById("writePopupContents").className="originalSkin";
+	
 	document.getElementById("letterLength").innerHTML='(0/500)'; 
   popup4.classList.add('hide');
 }
