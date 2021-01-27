@@ -14,7 +14,7 @@ body {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    background : black;
+    background: #e7ce94;
     overflow-x:hidden;
     overflow-y:auto;
     z-index:-3;
@@ -27,7 +27,7 @@ body {
         font-size : 1.3rem;
         font-weight: bold;;
         top : 0px;
-        height : 340px;
+        height : 360px;
         z-index:-2;
     }
 
