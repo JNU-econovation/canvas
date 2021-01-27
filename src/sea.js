@@ -101,6 +101,7 @@ function spawnBottle() {
     }
     bottle.style.left = bottleLeft + '%';
     bottle.style.top = bottleTop + '%';
+    bottle.style.cursor="pointer";
     bottle.style.height='76px';
     bottle.style.width='250px';
     bottle.style.zIndex = '0';
