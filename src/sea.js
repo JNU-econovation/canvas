@@ -87,11 +87,13 @@ function spawnBottle() {
     bottleTop = String((Math.random()*100)%100);
     console.log(bottleLeft+" ,"+bottleTop);
     while(
-        ((bottleLeft<33)&&(bottleTop<35.6))||
-        (((bottleLeft<50)&&(bottleLeft>25))&&((bottleTop<60)&&(bottleTop>41.5)))||
-        (((bottleLeft<71.3)&&(bottleLeft>39))&&((bottleTop<54.4)&&(bottleTop>28)))||
-        (((bottleLeft<100)&&(bottleLeft>63.6))&&((bottleTop<82)&&(bottleTop>62.4)))||
-        (((bottleLeft<36)&&(bottleLeft>2)))&&((bottleTop<100)&&((bottleTop<95)&&(bottleTop>71.6)))||
+        ((bottleLeft<33)&&(bottleTop<35.6))||//umbrella
+        (((bottleLeft<50)&&(bottleLeft>25))&&((bottleTop<55)&&(bottleTop>36.5)))||//pot
+        (((bottleLeft<75)&&(bottleLeft>55))&&((bottleTop<25)&&(bottleTop>10)))||//redshell
+        (((bottleLeft<89)&&(bottleLeft>65))&&((bottleTop<55)&&(bottleTop>36.5)))||//flag
+        (((bottleLeft<71.3)&&(bottleLeft>39))&&((bottleTop<54.4)&&(bottleTop>23)))||//sandcastle
+        (((bottleLeft<100)&&(bottleLeft>63.6))&&((bottleTop<77)&&(bottleTop>53.4)))||//ball
+        (((bottleLeft<36)&&(bottleLeft>2)))&&((bottleTop<100)&&((bottleTop<90)&&(bottleTop>58.6)))||//sandle
         (bottleTop<14)||
         (bottleLeft>97)
         )
