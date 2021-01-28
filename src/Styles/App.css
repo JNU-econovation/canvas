@@ -36,15 +36,15 @@ ul {
 }
 
 .originalSkin {
-  background-image: url("../Assets/Images/letter_original_small.png");
+  background-image: url("../Assets/Images/letter-original.png");
 }
 
 .oldSkin {
-  background-image: url("../Assets/Images/letter_old_small.png");
+  background-image: url("../Assets/Images/letter_old.png");
 }
 
 .seafoodSkin {
-  background-image: url("../Assets/Images/letter_seafood_small.png");
+  background-image: url("../Assets/Images/letter_seafood.png");
 }
 /*
 #originalWP {
@@ -101,9 +101,9 @@ ul {
   border-color: transparent;
   border: none;
   outline: none;
-  background-image: url("../Assets/Images/lettericon_original_small.png");
-  width: 40px;
-  height: 43px;
+  background-image: url("../Assets/Images/lettericon_original.png");
+  width: 201px;
+  height: 212px;
   z-index: 54;
   margin-left: 14%;
   margin-top: 10%;
@@ -119,9 +119,9 @@ ul {
   border-color: transparent;
   border: none;
   outline: none;
-  background-image: url("../Assets/Images/lettericon_old_small.png");
-  width: 40px;
-  height: 43px;
+  background-image: url("../Assets/Images/lettericon_old.png");
+  width: 201px;
+  height: 212px;
   z-index: 54;
 
   margin-left: 4%;
@@ -137,9 +137,9 @@ ul {
   border-color: transparent;
   border: none;
   outline: none;
-  background-image: url("../Assets/Images/lettericon_seafood_small.png");
-  width: 40px;
-  height: 43px;
+  background-image: url("../Assets/Images/lettericon_seafood.png");
+  width: 201px;
+  height: 212px;
   z-index: 54;
   margin-left: 4%;
   margin-top: 10%;
@@ -158,14 +158,15 @@ header {
 
 #writeContents {
   margin-top: 0%;
-  margin-left: 13.8%;
+  margin-left: 13.6%;
   outline: none;
-  width: 380px;
-  height: 450px;
+  width: 1900px;
+  height: 2250px;
+  border-width: 6px;
   background: transparent;
   border-color: #eeeeee;
   /*border-color: transparent;*/
-  font-size: 16px;
+  font-size: 80px;
   font-family: "Gaegu", cursive;
 }
 
@@ -209,19 +210,20 @@ header {
 }
 
 #writeDate {
-  width: 500px;
-  height: 40px;
+  width: 2500px;
+  height: 200px;
   position: relative;
-  left: 30px;
-  top: 90px;
-  font-size: 22px;
+  left: 260px;
+  top: 420px;
+  font-size: 110px;
   font-family: "Gaegu", cursive;
 }
 
 #letterDate {
   position: relative;
   margin-left: 55%;
-  top: 100px;
+  top: 500px;
+  font-size: 100px;
 
   font-family: "Gaegu", cursive;
 }
@@ -234,9 +236,10 @@ header {
   background-image: url("../Assets/Images/button_return_small.png");
   width: 130px;
   height: 41px;
-  z-index: 54;
-  margin-left: 38%;
-  margin-top: 2%;
+  position: absolute;
+  left: 46%;
+  top: 92.5%;
+  z-index: 65;
   cursor: pointer;
 }
 
@@ -248,9 +251,10 @@ header {
   background-image: url("../Assets/Images/button_floating_small.png");
   width: 130px;
   height: 41px;
-  z-index: 54;
-  margin-left: 29%;
-  margin-top: 2%;
+  position: absolute;
+  left: 56%;
+  top: 92.5%;
+  z-index: 65;
   cursor: pointer;
 }
 
@@ -262,9 +266,10 @@ header {
   background-image: url("../Assets/Images/button_cancel_small.png");
   width: 130px;
   height: 41px;
-  z-index: 4;
-  margin-top: 0%;
-  margin-left: 10.5%;
+  position: absolute;
+  left: 36%;
+  top: 92.5%;
+  z-index: 65;
   cursor: pointer;
 }
 
@@ -320,31 +325,32 @@ header {
 }
 
 #letterPopupContents {
-  padding-top: 14%;
-  margin-top: 2%;
-  width: 520px;
-  height: 673px;
+  margin-bottom: 2%;
+  width: 2597px;
+  height: 3360px;
+  transform: scale(0.2);
 }
 
 #writePopupContents {
-  margin-top: 2%;
-  width: 520px;
-  height: 673px;
+  margin-bottom: 2%;
+  width: 2597px;
+  height: 3360px;
+  transform: scale(0.2);
 }
 
 #infoContents {
   background-image: url("../Assets/Images/infor.png");
   width: 1732px;
   height: 2240px;
-  transform: scale(0.32);
+  transform: scale(0.22);
 }
 
 #letterContents {
-  margin-top: 5%;
+  padding-top: 400px;
   margin-left: 18%;
   margin-right: 18%;
-  font-size: 16px;
-  height: 380px;
+  font-size: 80px;
+  height: 1900px;
   overflow-y: scroll;
 
   font-family: "Gaegu", cursive;
@@ -360,8 +366,9 @@ header {
 }
 
 #letterLength {
-  font-size: 22px;
+  font-size: 110px;
   margin-left: 70%;
+  margin-top: 1%;
   font-family: "Gaegu", cursive;
 }
 
@@ -396,7 +403,7 @@ header {
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
 }
-
+/*
 #letterPopup .content {
   padding-top: 200px;
   padding-bottom: 200px;
@@ -419,7 +426,7 @@ header {
 
   z-index: 50;
 }
-
+*/
 body > .info {
   background-color: #c3bebc;
 }
