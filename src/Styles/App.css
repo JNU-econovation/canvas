@@ -92,7 +92,7 @@ ul {
 }
 */
 .bottleLetter:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 #originalWP {
@@ -109,6 +109,9 @@ ul {
   margin-top: 10%;
   margin-bottom: 3%;
 }
+#originalWP:hover {
+  transform: scale(1.1);
+}
 
 #oldWP {
   float: left;
@@ -124,6 +127,9 @@ ul {
   margin-left: 4%;
   margin-top: 10%;
 }
+#oldWP:hover {
+  transform: scale(1.1);
+}
 
 #seafoodWP {
   float: left;
@@ -137,6 +143,9 @@ ul {
   z-index: 54;
   margin-left: 4%;
   margin-top: 10%;
+}
+#seafoodWP:hover {
+  transform: scale(1.1);
 }
 
 header {
@@ -289,7 +298,7 @@ header {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.7);
-  z-index: 54;
+  z-index: 60;
 
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
@@ -304,7 +313,7 @@ header {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.7);
-  z-index: 50;
+  z-index: 60;
 
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
@@ -324,9 +333,10 @@ header {
 }
 
 #infoContents {
-  background-image: url("../Assets/Images/info_small.png");
-  width: 550px;
-  height: 711px;
+  background-image: url("../Assets/Images/infor.png");
+  width: 1732px;
+  height: 2240px;
+  transform: scale(0.32);
 }
 
 #letterContents {
@@ -381,7 +391,7 @@ header {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.7);
-  z-index: 50;
+  z-index: 60;
 
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
