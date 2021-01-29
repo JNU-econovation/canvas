@@ -23,7 +23,7 @@ function getWeather(lat, lng){
 
             weather.innerText= 
             //`현재 위치 : ${place} \n 현재 기온 : ${temperature} \n 날씨id : ${id}`;
-            `  ${temperature}℃ in ${place}  `;
+            `\u00A0 ${temperature}℃ in ${place}  `;
             
             //날씨 id값 별 배경 애니메이션 조절
             if( id < 200) {  // 애니메이션 X
@@ -55,7 +55,7 @@ function getWeather(lat, lng){
                 document.querySelector(".snowflakes").style.display="blcok";
                 document.querySelector(".clouds").style.display="blcok";
                 document.querySelector(".rain").style.display="none";
-                document.querySelector(".sun").style.display="none";    //눈올 때 해X
+                document.querySelector(".sun").style.display="blcok";    //눈올 때 해X
 
             }
             else if( id == 800) {  // 800 : 맑음

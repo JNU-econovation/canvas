@@ -46,6 +46,6 @@ else if(current.getHours() < 24) {
 
 
 //document.write("현재 시간 : ");
-document.write(current.getHours(), " : ");
+document.write("&nbsp;&nbsp;",current.getHours(), " : ");
 document.write(current.getMinutes(), " : ");
 document.write(current.getSeconds(), "<br>");

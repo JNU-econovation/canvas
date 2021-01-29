@@ -23,9 +23,9 @@ body {
 .sky {
         overflow : hidden;
         color :white;
-        font-family: "휴면편지";
-        font-size : 1.3rem;
-        font-weight: bold;;
+        font-family: "Gaegu", cursive;
+        font-size : 1.6rem;
+        font-weight: bold;
         top : 0px;
         height : 360px;
         z-index:-2;
